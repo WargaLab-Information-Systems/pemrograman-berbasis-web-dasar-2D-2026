@@ -1,0 +1,179 @@
+body {
+    margin: 0px;
+    background-color: #F2F0EA;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-top: -2px;
+    font-family: cursive;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #A8D5E3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2px;
+}
+
+.navbar1 {
+    background-color: #efef26;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2px;
+}
+
+.bc {
+    margin: 0px;
+    background-color: #9742ff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nama {
+    font-size:10px;
+    font-weight:bold;
+    font-family: cursive;
+    margin-left: 20px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+    gap: 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.menu li a:hover {
+    color: white;
+}
+
+
+.datadiri {
+    padding: 5px;
+    margin-top: 20px;
+    background-color: #FF78AC;
+}
+
+ table {
+    width: 80%;
+    margin: 0px auto;
+    border-collapse: collapse;
+    border-color: white;
+}
+
+table tr th {
+    padding: 2px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+table tr td {
+    padding: 5px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.foto {
+    width: 100px;
+    height: 130px;
+    object-fit: cover;
+}
+
+.edukasi {
+    background-color: #FF78AC;
+    padding-bottom: 10px;
+}
+
+.kerja {
+    background-color: #FF78AC;
+    padding-bottom: 10px;
+}
+
+.organisasi {
+    background-color: #FF78AC;
+    padding-bottom: 10px;
+}
+
+.footer {
+    background-color: #A8D5E3;
+    text-align: center;
+    font-size: 11px;
+    padding: 2px;
+    color: black;
+    font-family: sans-serif;
+}
+
+.cover1 {
+    background-image: url(assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.form {
+    margin-left: 7px;
+}
+
+.form label {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cerita h3,
+.cerita p {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.buku {
+    background-color: #626578;
+}
+
+
+.jdl {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    display: block;
+}
+
+
+.jdl:hover{
+    color: #A8D5E3;
+}
+
+
+.buku1 {
+    padding: 20px;
+    background-image: url(assets/Library.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.buku1 h2,
+.buku1 p,
+.buku1 h5 {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.ft {
+    width: 160px;
+}
