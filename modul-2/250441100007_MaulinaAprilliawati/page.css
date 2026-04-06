@@ -1,0 +1,175 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background: white;
+            position: sticky;
+            top: 0;
+        }
+
+        nav h1 {
+            color: #2e8b57;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* HOME / HERO */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to right, #e0f7ec, white);
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            color: #2e8b57;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            padding: 12px 25px;
+            background: #2e8b57;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background: #256f47;
+        }
+
+        /* PRODUK */
+        .produk h2 {
+            margin: 50px;
+        }
+        .produk {
+            padding: 60px 50px;
+            text-align: center;
+        }
+
+        .produk-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .card button {
+            background: #2e8b57;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* TESTIMONI */
+        .testimoni {
+            padding: 60px;
+            background: #e0f7ec;
+            text-align: center;
+        }
+
+        .testi-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .testi {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            width: 250px;
+        }
+
+        /* KONTAK */
+        .kontak {
+            padding: 60px;
+            text-align: center;
+        }
+
+        .kontak form {
+            max-width: 400px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .kontak input, .kontak textarea {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .kontak button {
+            background: #2e8b57;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #2e8b57;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+.testi img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.stars {
+    color: gold;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
