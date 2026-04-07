@@ -1,0 +1,63 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(232, 253, 217);
+    margin: 0;
+    padding: 0;
+}
+
+.kotak {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px; 
+  padding: 6px; 
+}
+
+.kartu {
+  background-color: beige;
+  width: 200px; 
+  padding: 70px; 
+  text-align: center;
+  justify-self: center;
+  border: 1px solid rgb(5, 138, 10);
+  border-radius: 10px; 
+}
+
+
+.tombol {
+    color: white;
+    display: inline-block; 
+    margin-top: 10px;
+    padding: 10px 8px; 
+    background-color: rgb(28, 165, 10);
+    border-radius: 10px;
+    text-decoration: none; 
+}
+
+.tombol:hover {
+  color: white;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 8px;
+    background-color: rgb(29, 100, 20);
+    border-radius: 10px;
+}
+
+.keajaiban {
+  font-family: 'Montserrat', sans-serif;    
+    font-size: 24px;        
+    color: black;           
+    text-align: center;    
+}
+
+.isi {
+  font-family: 'Montserrat', sans-serif;    
+    font-size: 10px;                   
+    text-align: center;   
+}
+
+.detail{
+  font-family: 'Montserrat', sans-serif;  
+   font-size: 15px;
+   color:black
+}
