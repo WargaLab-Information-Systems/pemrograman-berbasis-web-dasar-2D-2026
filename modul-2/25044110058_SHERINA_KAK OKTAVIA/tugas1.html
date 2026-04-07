@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowies</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background: pink;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: cornsilk;
+    }
+    nav a:hover {
+      color: grey;
+      text-decoration: underline;
+    }
+
+    .produk {
+      display: flex;
+      /* align-items: center; */
+      padding: 20px;
+      gap: 20px;
+    }
+    .produk-img img {
+      width: 400px;
+      border-radius: 5px;
+    }
+    .produk-desc h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .testimoni {
+      background: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .card {
+      background: blanchedalmond;
+      padding: 15px;
+      margin: 10px auto;
+      max-width: 300px;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: pink;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Glowies</h1>
+      <ul class="nav-links">
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div id="produk" class="produk"> 
+  <div class="produk-img">
+    <img src="glowies.jpeg" alt="Produk glowies">
+  </div>
+  <div class="produk-desc">
+    <h2>Skincare Modern untuk Kulit Agar Lebih Percaya Diri</h2>
+    <p>Dreamy Moisturaizer diperkaya dengan serum untuk melembabkan sekaligus mencerahkan. 
+        memudarkan noda hitam. merawat jerawat dan memperbaiki barrier kulit.
+    </p>
+    <a href="#">Beli Sekarang</a>
+  </div>
+</div>
+
+
+  <div id="testimoni" class="testimoni">
+    <h3>Komentar</h3>
+    <div class="card">
+      <p>"Kulit saya jadi lebih cerah dan memudahkan bekas jerawat sejak pakai glowies!"</p>
+      <span>- rara, 20 tahun</span>
+    </div>
+    <div class="card">
+      <p>"Teksturnya ringan dan cepat menyerap, cocok untuk sehari-hari bisa dipakai pagi dan malam."</p>
+      <span>- aprilia, 19 tahun</span>
+    </div>
+  </div>
+
+  <footer id="kontak">
+    <p>&copy; 2026 Scora. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
