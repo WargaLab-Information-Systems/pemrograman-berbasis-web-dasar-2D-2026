@@ -1,0 +1,122 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    background-color: #ffa500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2px;
+}
+
+.logo {
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+
+.menu {
+    display: flex;
+    margin-right: 20px;
+}
+
+.produk {
+    list-style: none;
+    margin-right: 10px;
+    display: flex;
+    gap: 15px;
+}
+.produk li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.produk li a:hover {
+    color: white;
+}
+
+.login {
+    list-style: none;
+    margin-right: 20px;
+    display: flex;
+    gap: 15px;
+}
+.login li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.login li a:hover {
+    color: white;
+}
+
+main {
+    margin-top: 100px;
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.card {
+    background: #f5f5f7;
+    width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+.card h5 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 5px;
+}
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 0px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.card:hover .ps5 {
+    content: url(assets/ps1.png);
+}
+
+.card:hover .ds5 {
+    content: url(assets/ds5.png);
+}
+.card:hover .ps4 {
+    content: url(assets/ps44.png);
+}
+.card:hover .ds4 {
+    content: url(assets/ds44.png);
+}
+
+img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+footer {
+    background-color: #ffa500;
+    text-align: center;
+    font-size: 11px;
+    padding: 2px;
+    color: black;
+    font-family: sans-serif;
+    margin-bottom: 0px;
+}
