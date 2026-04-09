@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #d4d4d4;
+  margin: 0;
+  padding: 20px 30px;
+}
+
+.container-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3f2262;
+}
+
+.menu {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding-left: 0;
+  margin-right: 10px;
+}
+
+.menu li a {
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.utama {
+  margin: 0;
+  background-color: #27272c;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.container-utama {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tombol {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: white;
+  color: #1847e1;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 1.5s;
+}
+
+.tombol:hover {
+  background-color: #bfbfbf;
+  padding: 7px 19px;
+}
+
+.konten-kiri {
+  width: 50%;
+  color: white;
+}
+
+.label-kiri {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.deskripsi-kiri {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.judul-kiri {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.konten-kanan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-kanan {
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+
+.image-kanan img {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 400px;
+  transition:
+    transform 0.5s ease,
+    opacity 0.3s ease;
+}
+
+.gambar_depan {
+  opacity: 1;
+}
+
+.image-kanan:hover .gambar_depan {
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+.gambar_belakang {
+  opacity: 0;
+}
+
+.image-kanan:hover .gambar_belakang {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.list_produk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.produk-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  margin: 10px;
+}
+
+.produk-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #394057;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.produk-card a:hover {
+  background-color: #27272c;
+}
+
+.produk-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
