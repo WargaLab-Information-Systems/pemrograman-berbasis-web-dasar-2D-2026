@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sudut Rebah Coffee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#katalog">☕ Delivery Menu</a>
+        <a href="#acara">📦 Pesanan Acara</a>
+        <a href="#offline">📍 Info Toko Offline</a>
+    </div>
+
+    <div class="hero-section">
+        <h1 style="margin: 0; font-size: 45px; text-transform: uppercase;">Sudut Rebah Coffee</h1>
+        <p style="font-size: 18px; font-weight: bold; color: #5D4037;">Lagi Mager? Biar Kami Yang Antar. Mau Nongkrong? Mampir Saja!</p>
+        <p>Pilih menu di bawah jika kamu ingin pesan antar, atau kunjungi kedai kami untuk menikmati suasana santai.</p>
+    </div>
+
+    <div class="wadah-utama">
+        
+        <h2 id="katalog" style="text-decoration: underline; text-align: center;">Katalog Menu (Delivery Service)</h2>
+        <p style="text-align: center; font-style: italic;">Klik "Pesan Antar" untuk memesan langsung via WhatsApp Kurir.</p>
+
+        <div class="area-produk">
+            
+            <div class="kartu-menu">
+                <img src="img/kopi_susu.jpg" alt="Kopi Susu Rebah" class="gambar-minuman">
+                <h3 style="color: #795548; margin-bottom: 5px;">Es Kopi Susu Rebah</h3>
+                <p style="margin-top: 0; font-size: 14px;">Espresso House Blend & Krimer Lembut.</p>
+                <p><b>Rp 18.000</b></p>
+                <a href="https://wa.me/6285854571506?text=Halo%20Admin%20Sudut%20Rebah%2C%20saya%20mager%20nih%2C%20mau%20delivery%20*Es%20Kopi%20Susu%20Rebah*." class="tombol-pesan">Pesan Antar</a>
+            </div>
+
+            <div class="kartu-menu">
+                <img src="img/matcha.jpg" alt="Matcha Latte" class="gambar-minuman">
+                <h3 style="color: #795548; margin-bottom: 5px;">Matcha Jeda Waktu</h3>
+                <p style="margin-top: 0; font-size: 14px;">Matcha Premium & Susu Segar.</p>
+                <p><b>Rp 22.000</b></p>
+                <a href="https://wa.me/6285854571506?text=Halo%20Admin%20Sudut%20Rebah%2C%20saya%20mager%20nih%2C%20mau%20delivery%20*Matcha%20Jeda%20Waktu*." class="tombol-pesan">Pesan Antar</a>
+            </div>
+
+            <div class="kartu-menu">
+                <img src="img/cokelat.jpg" alt="Cokelat Klasik" class="gambar-minuman">
+                <h3 style="color: #795548; margin-bottom: 5px;">Es Cokelat Klasik</h3>
+                <p style="margin-top: 0; font-size: 14px;">Cokelat Belgia Pekat.</p>
+                <p><b>Rp 20.000</b></p>
+                <a href="https://wa.me/6285854571506?text=Halo%20Admin%20Sudut%20Rebah%2C%20saya%20mager%20nih%2C%20mau%20delivery%20*Es%20Cokelat%20Klasik*." class="tombol-pesan">Pesan Antar</a>
+            </div>
+
+        </div>
+
+        <hr style="margin: 40px 0; border: 1px dashed #D7CCC8;">
+
+        <h2 id="acara" style="text-align: center;">📦 Form Pemesanan Acara / Event</h2>
+        <p style="text-align: center;">Ada acara meeting kantor atau kumpul keluarga? Kami sediakan kopi dalam jumlah besar.</p>
+        
+        <div class="form-katering">
+            <form action="">
+                <p><b>Nama Pemesan / Instansi:</b></p>
+                <input type="text" class="input-form" placeholder="Masukkan nama Anda...">
+
+                <p><b>Kategori Minuman yang Dipesan:</b></p>
+                <input type="radio" name="kategori"> Full Kopi (Coffee Based) <br>
+                <input type="radio" name="kategori"> Full Non-Kopi (Matcha, Cokelat) <br>
+                <input type="radio" name="kategori"> Mix Kopi & Non-Kopi
+
+                <p><b>Jumlah Cup (Minimal Order 20 Cup):</b></p>
+                <input type="number" class="input-form" style="width: 30%;" placeholder="Contoh: 50" min="20">
+
+                <p><b>Kebutuhan Ekstra:</b></p>
+                <input type="checkbox"> Peminjaman Cooler Box (Kotak Es) <br>
+                <input type="checkbox"> Barista Stand (Seduh di Lokasi)
+
+                <br><br>
+                <input type="submit" value="Kirim Request Acara" style="padding: 15px; width: 100%; background-color: #5D4037; color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 10px; font-size: 16px;">
+            </form>
+        </div>
+
+        <hr style="margin: 40px 0; border: 1px dashed #D7CCC8;">
+
+        <h2 id="offline" style="text-align: center;">📍 Kunjungi Kedai Offline Kami</h2>
+        <p style="text-align: center;">Sedang tidak mager dan butuh tempat nugas? Kami tunggu kedatanganmu di kedai kami dengan fasilitas lengkap!</p>
+        
+        <table border="1" class="tabel-offline">
+            <thead>
+                <tr>
+                    <th>Cabang Kedai</th>
+                    <th>Jam Operasional</th>
+                    <th>Fasilitas Unggulan</th>
+                    <th>Link Maps</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Sudut Rebah - Pusat (Gresik Kota)</b></td>
+                    <td>09.00 - 23.00 WIB</td>
+                    <td>Free WiFi, Colokan Tiap Meja, AC Indoor</td>
+                    <td><a href="#" style="color: #795548; font-weight: bold;">Buka Google Maps</a></td>
+                </tr>
+                <tr>
+                    <td><b>Sudut Rebah - Ekspres (Kampus)</b></td>
+                    <td>07.00 - 18.00 WIB</td>
+                    <td>Take-away Cepat, Diskon Mahasiswa</td>
+                    <td><a href="#" style="color: #795548; font-weight: bold;">Buka Google Maps</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br>
+    </div>
+
+</body>
+</html>
