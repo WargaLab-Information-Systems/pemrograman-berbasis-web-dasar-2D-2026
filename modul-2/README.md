@@ -7,5 +7,6 @@ contoh: **240441100011-EdiPutra**
 
 Kemudian, penamaan commit/pesan dengan format **NIM-NamaLengkap-Modul-NamaAsprak**
 contoh: **240441100011-EdiPutra-Modul1-AsprakKakEdi**
+250441100008-EloPresilBerfa-Modul2-AsprakKakRaka
 
 Kumpulkan tugas yang sudah dibuat di folder yang sudah disediakan dan kumpulkan tugas ketika sudah melakukan asistensi kepada Asisten Praktikum.
