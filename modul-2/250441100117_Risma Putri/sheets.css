@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+
+    background:linear-gradient(50deg, #edbcbc ,#a6596a);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+/* KIRI */
+.left {
+    width: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 120px;
+    color: #934253;
+    letter-spacing: 3px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.ket {
+    font-size: 20px;
+    color: #A64B5E;
+    margin-top: 0%;
+}
+
+.tagline {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+.desc {
+    color: #777;
+    margin-top: 0%;
+}
+
+.price {
+    background: linear-gradient(60deg, #A64B5E, #694040);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact {
+    margin-top: 20px;
+    color: #523b2d;
+}
+
+.yummyyy {
+    width: 300px;
+    display: block;
+    margin-top: 20px;
+    
+    
+    position: relative;
+    z-index: 5;
+}
+
+.right {
+    width: 40%;
+    position: relative;
+    z-index: 1;
+}
+
+/* CARD */
+.item {
+    background: #d1a4ae;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.donut {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    background: none;
+}
+
+.donut img {
+    width: 120%;
+    height: 120%;
+    border-radius: 98%;
+}
+
+.premium .donut {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.tiramisu .donut {
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.strowberry .donut {
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
