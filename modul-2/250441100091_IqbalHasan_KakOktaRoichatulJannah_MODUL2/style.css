@@ -1,0 +1,130 @@
+body {
+    background-color: #f0f4f8; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+}
+
+.wadah-utama {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #2C3E50;
+    padding: 15px 0;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    border-bottom: 4px solid #0090FF;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: transparent;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #0090FF;
+    color: white;
+}
+
+.hero-section {
+    background: linear-gradient(to right, #0090FF, #8E44AD);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid #2C3E50;
+    margin-bottom: 30px;
+}
+
+.area-produk {
+    text-align: center; 
+}
+
+.kartu-produk {
+    display: inline-block;
+    vertical-align: top;
+    width: 28%; 
+    margin: 1.5%; 
+    background-color: white;
+    border: 4px double #0090FF; 
+    border-radius: 15px;
+    padding-bottom: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.gambar-aplikasi {
+    width: 100%; 
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tombol-pesan {
+    display: inline-block;
+    background-color: #0090FF; 
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.tombol-pesan:hover {
+    background-color: #2C3E50;
+}
+
+.tabel-promo {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: center;
+    margin-top: 15px;
+    border: 2px solid #0090FF;
+}
+
+.tabel-promo th {
+    background-color: #0090FF;
+    color: white;
+    padding: 15px;
+}
+
+.tabel-promo td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.form-request {
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%);
+    border-left: 10px solid #0090FF;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.input-form {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
