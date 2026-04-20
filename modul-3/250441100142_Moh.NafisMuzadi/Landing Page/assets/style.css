@@ -1,0 +1,81 @@
+html,
+body {
+    height: 100%;
+    margin: 0px;
+}
+body {
+  background: rgb(255, 255, 255);
+}
+
+.navbar-custom {
+    background-color: whitesmoke;
+}
+
+.jumbotron {
+    max-width: 100%;
+    height: 400px;
+}
+.foto1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.jumbotron h1 {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.jumbotron h1:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.about {
+    padding: 15px;
+}
+.abut {
+    background-color: #cdcdcd;
+}
+.about h2 {
+    color: black;
+    padding-top: 20px;
+}
+.about p {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.jdl {
+    color: white;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-text {
+  max-height: 60px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.card:hover .card-text {
+  max-height: 500px;
+}
