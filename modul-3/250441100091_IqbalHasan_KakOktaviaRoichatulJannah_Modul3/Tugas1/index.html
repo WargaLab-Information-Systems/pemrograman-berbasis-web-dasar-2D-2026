@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Iqbal</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="font-extrabold text-2xl text-blue-600 tracking-wider">Web<span class="text-slate-800">.Portofolio</span></a>
+                
+                <div class="hidden md:flex space-x-8 font-semibold">
+                    <a href="#beranda" class="hover:text-blue-600 transition-colors">Beranda</a>
+                    <a href="#keahlian" class="hover:text-blue-600 transition-colors">Keahlian</a>
+                    <a href="#proyek" class="hover:text-blue-600 transition-colors">Proyek</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="outline-none">
+                        <svg class="w-8 h-8 text-slate-800" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 pb-4 shadow-inner">
+            <a href="#beranda" class="block py-3 px-4 text-sm font-medium hover:bg-blue-50">Beranda</a>
+            <a href="#keahlian" class="block py-3 px-4 text-sm font-medium hover:bg-blue-50">Keahlian</a>
+            <a href="#proyek" class="block py-3 px-4 text-sm font-medium hover:bg-blue-50">Proyek</a>
+        </div>
+    </nav>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <section id="beranda" class="py-20 bg-gradient-to-b from-blue-200 to-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-50">
+                <div class="w-48 md:w-64 aspect-[3/4] rounded-3xl overflow-hidden border-4 border-white shadow-xl flex-shrink-0 bg-slate-200">
+                    <img src="img/fotodiri.jpeg" alt="Foto Iqbal" class="w-full h-full object-cover object-top">
+                </div>
+
+                <div class="text-center md:text-left flex-1">
+                    <h2 class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-2">Selamat Datang!</h2>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">
+                        Saya Iqbal
+                    </h1>
+                    
+                    <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg inline-block font-semibold mb-6 shadow-sm border border-blue-200">
+                        Mahasiswa Sistem Informasi | NIM: 25_091
+                    </div>
+
+                    <p class="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">
+                        Saya adalah seorang Mahasiswa Sistem Informasi yang suka mengeksplorasi berbagai bidang teknologi. Tidak hanya berfokus pada pengembangan <b>Front-End Web</b> (HTML, CSS, Tailwind), saya juga aktif melakukan praktik langsung dalam perancangan <b>Database (SQL)</b>, manajemen <b>Sistem Operasi (Linux)</b>, pengembangan logika <i>in-game</i> <b>(Lua)</b>, hingga penyuntingan <b>Video & Multimedia</b>.
+                    </p>
+                    
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="#proyek" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                            Lihat Proyek
+                        </a>
+                        <a href="mailto:craftkevin35@gmail.com" class="bg-white text-slate-700 border border-slate-300 px-8 py-3 rounded-full font-bold shadow-sm hover:bg-slate-50 hover:border-slate-400 transition-all duration-300 transform hover:-translate-y-1">
+                            Email Saya
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="keahlian" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12 text-slate-800 relative inline-block">
+                Bahasa & Alat yang Dipelajari
+                <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-blue-500 rounded-full"></span>
+            </h2>
+            
+            <div class="flex flex-wrap justify-center gap-4 mt-4">
+                <span class="px-6 py-3 bg-orange-100 text-orange-700 rounded-lg font-bold shadow-sm border border-orange-200">HTML5 / CSS3</span>
+                <span class="px-6 py-3 bg-teal-100 text-teal-700 rounded-lg font-bold shadow-sm border border-teal-200">Tailwind CSS</span>
+                <span class="px-6 py-3 bg-purple-100 text-purple-700 rounded-lg font-bold shadow-sm border border-purple-200">Bootstrap</span>
+                <span class="px-6 py-3 bg-blue-100 text-blue-700 rounded-lg font-bold shadow-sm border border-blue-200">Database SQL</span>
+                <span class="px-6 py-3 bg-zinc-100 text-zinc-700 rounded-lg font-bold shadow-sm border border-zinc-200">Linux Server</span>
+                <span class="px-6 py-3 bg-indigo-100 text-indigo-700 rounded-lg font-bold shadow-sm border border-indigo-200">Roblox Studio / Lua</span>
+                <span class="px-6 py-3 bg-red-100 text-red-700 rounded-lg font-bold shadow-sm border border-red-200">Video Editing / Wondershare Filmora 12</span>
+                <span class="px-6 py-3 bg-slate-100 text-slate-700 rounded-lg font-bold shadow-sm border border-slate-200">Git & GitHub</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyek" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-slate-800 relative inline-block left-1/2 transform -translate-x-1/2">
+                Karya & Portofolio
+                <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-blue-500 rounded-full"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative group">
+                        <img src="img/Gambar1.png" alt="Pixel Premium Store" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-xl mb-2 text-slate-800">Pixel Premium Store</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Perancangan website e-commerce untuk penjualan akun premium yang dibangun menggunakan elemen HTML & CSS murni.</p>
+                        <a href="referencesweb" target="_blank" class="text-blue-600 font-bold hover:text-blue-800 text-sm inline-flex items-center">
+                            Lihat Detail 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative group">
+                        <img src="img/Gambar2.png" alt="Sistem Database Kopi" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-xl mb-2 text-slate-800">Sistem Database Kopi</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Perancangan Entity-Relationship Diagram (ERD) dan struktur database SQL untuk optimalisasi manajemen inventaris kedai kopi.</p>
+                        <a href="img/Gambar2.png" target="_blank" class="text-blue-600 font-bold hover:text-blue-800 text-sm inline-flex items-center">
+                            Lihat Detail 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative group">
+                        <img src="img/Gambar3.png" alt="Modifikasi STB Linux" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-xl mb-2 text-slate-800">Modifikasi STB Linux</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Konfigurasi dan modifikasi perangkat keras STB menjadi mini server fungsional berbasis sistem operasi Armbian Linux.</p>
+                        <a href="https://panel.ibaskara.my.id/ibaskarapanel" target="_blank" class="text-blue-600 font-bold hover:text-blue-800 text-sm inline-flex items-center">
+                            Lihat Detail 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative group">
+                        <img src="img/Gambar4.png" alt="Roblox Developer" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-xl mb-2 text-slate-800">Roblox Developer</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Pengembangan environment interaktif dan logika in-game pada platform Roblox Studio menggunakan bahasa pemrograman Lua.</p>
+                        <a href="img/Gambar4.png" target="_blank" class="text-blue-600 font-bold hover:text-blue-800 text-sm inline-flex items-center">
+                            Lihat Detail 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative group">
+                        <img src="img/Gambar5.png" alt="Editing Video" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-xl mb-2 text-slate-800">Editing Video Event</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-1">Produksi dan penyuntingan video sinematik angkatan 2025 menggunakan perangkat lunak Filmora 12 dalam kepanitiaan divisi multimedia.</p>
+                        <a href="https://youtu.be/_VM8yAVYXwM?si=PCpuHwQ5jfqXUhnM" target="_blank" class="text-blue-600 font-bold hover:text-blue-800 text-sm inline-flex items-center">
+                            Lihat Detail 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center border-t border-slate-800">
+        <p class="text-sm">&copy; 2026 Iqbal Hasan. Dibangun dengan <span class="text-teal-400">Tailwind CSS</span>.</p>
+    </footer>
+
+</body>
+</html>
