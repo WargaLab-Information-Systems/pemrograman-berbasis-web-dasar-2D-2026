@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AlfanPorto_</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <nav
+      class="bg-blue-600 text-white p-5 flex justify-between items-center shadow-md"
+    >
+      <h1 class="text-xl font-bold">AlfanPorto_</h1>
+      <div class="space-x-4">
+        <a href="#beranda" class="hover:underline">Beranda</a>
+        <a href="#tentang" class="hover:underline">Tentang</a>
+        <a href="#projek" class="hover:underline">Projek</a>
+        <a href="#kontak" class="hover:underline">Kontak</a>
+      </div>
+    </nav>
+
+    <section
+      id="beranda"
+      class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-200 to-indigo-600 text-white"
+    >
+      <img src="image/foto diri.png" class="rounded-full mb-4 shadow-lg" />
+      <h2 class="text-4xl font-bold mb-2">Alfan Hamdani</h2>
+      <p class="text-lg">Web Developer | UI Designer</p>
+    </section>
+
+    <section id="tentang" class="p-10 max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center">Tentang Saya</h2>
+      <p class="text-center">
+        Saya adalah seorang developer yang fokus dalam pembuatan website modern,
+        responsive, dan user friendly menggunakan teknologi terbaru.
+      </p>
+    </section>
+
+    <section id="projek" class="p-10 bg-gray-200">
+      <h2 class="text-3xl font-bold mb-6 text-center">Projek Saya</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div
+          class="bg-white p-4 rounded-xl shadow-md hover:scale-105 transition"
+        >
+          <img src="image/web yakult.png" class="rounded mb-3" />
+          <h3 class="font-bold text-lg">Projek 1</h3>
+          <p class="text-sm">Website penjualan sederhana.</p>
+        </div>
+
+        <div
+          class="bg-white p-4 rounded-xl shadow-md hover:scale-105 transition"
+        >
+          <img src="image/web neev.png" class="rounded mb-3" />
+          <h3 class="font-bold text-lg">Projek 2</h3>
+          <p class="text-sm">Landing page modern.</p>
+        </div>
+
+        <div
+          class="bg-white p-4 rounded-xl shadow-md hover:scale-105 transition"
+        >
+          <img src="image/web e-mbek.png" class="rounded mb-3" />
+          <h3 class="font-bold text-lg">Projek 3</h3>
+          <p class="text-sm">Sistem informasi sederhana.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="p-10 max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center">Kontak</h2>
+
+      <form class="flex flex-col gap-10">
+        <input type="text" placeholder="Nama" class="p-3 rounded" />
+        <input type="email" placeholder="Email" class="p-3 border rounded" />
+        <textarea placeholder="Pesan" class="p-3 border rounded"></textarea>
+        <button class="bg-blue-600 text-white p-3 rounded hover:bg-blue-700">
+          Kirim
+        </button>
+      </form>
+    </section>
+
+    <footer class="bg-blue-600 text-white text-center p-4">
+      <p>© 2026 AlfanPorto_</p>
+    </footer>
+  </body>
+</html>
