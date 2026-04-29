@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .left {
+      background: #617cc4;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px;
+    }
+
+    .left h2 {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    .left p {
+      margin-top: 20px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .left img {
+      width: 320px;
+      margin-top: 30px;
+    }
+
+    .right {
+      background: #eef1f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      width: 340px;
+    }
+
+    .login-title {
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .login-sub {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 25px;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      padding: 12px;
+      border: none;
+      background: #f3f3f3;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .btn-login {
+      background: #4a63b5;
+      color: white;
+      border-radius: 10px;
+      padding: 12px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #ccc;
+    }
+
+    .divider span {
+      margin: 0 10px;
+      font-size: 12px;
+      color: #888;
+    }
+
+    .btn-google {
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      font-size: 14px;
+    }
+
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+
+      <div class="col-md-6 left">
+        <h2>Hello Prospective Students</h2>
+
+        <img src="UTS/gambar_login page.png">
+
+        <p>
+          Unlock your professional potential. Learn from industry leaders and stay ahead of the competition.
+        </p>
+      </div>
+
+      <div class="col-md-6 right">
+        <div class="login-box">
+
+          <h5 class="login-title">LOGIN PAGE</h5>
+          <p class="login-sub">Masukkan Username dan Password Anda</p>
+
+          <input type="email" id="email" class="form-control mb-1" placeholder="Email Addres">
+          <div id="emailError" class="error"></div>
+
+          <input type="password" id="password" class="form-control mb-1" placeholder="Password">
+          <div id="passError" class="error"></div>
+
+          <button onclick="login()" class="btn btn-login w-100 mb-3">
+            Login
+          </button>
+
+          <div class="divider">
+            <span>Or Login With</span>
+          </div>
+
+          <button onclick="loginGoogle()" class="btn btn-google w-100 d-flex justify-content-center align-items-center gap-2">
+            <img src="https://img.icons8.com/color/20/google-logo.png">
+            Sign in with Account Google
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      var emailError = document.getElementById("emailError");
+      var passError = document.getElementById("passError");
+
+      emailError.innerHTML = "";
+      passError.innerHTML = "";
+
+      var valid = true;
+
+      if (email === "") {
+        emailError.innerHTML = "Email wajib diisi";
+        valid = false;
+      } else if (!email.includes("@")) {
+        emailError.innerHTML = "Format email tidak valid";
+        valid = false;
+      }
+
+      if (password === "") {
+        passError.innerHTML = "Password wajib diisi";
+        valid = false;
+      } else if (password.length < 6) {
+        passError.innerHTML = "Password minimal 6 karakter";
+        valid = false;
+      }
+
+      if (valid) {
+        window.location.href = "Tugas 1.html";
+      }
+    }
+
+    function loginGoogle() {
+      alert("Login dengan Google berhasil!");
+      window.location.href = "Tugas 1.html";
+    }
+  </script>
+
+</body>
+</html>
