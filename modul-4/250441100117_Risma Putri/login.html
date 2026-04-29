@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this login</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body.dark { background-color: #1a1a2e; }
+    body.dark .bg-white { background-color: #16213e !important; }
+    body.dark .bg-\[\#E8EAF6\] { background-color: #0f3460 !important; }
+    body.dark .bg-\[\#3852B4\] { background-color: #0f3460 !important; }
+    body.dark .bg-\[\#5E7AA4\] { background-color: #1a1a2e !important; }
+    body.dark .text-gray-800,
+    body.dark .text-gray-700,
+    body.dark .text-gray-600 { color: #e0e0e0 !important; }
+    body.dark .text-gray-500 { color: #a0a0a0 !important; }
+    body.dark footer { background-color: #0f3460 !important; }
+  </style>
+</head>
+<body>
+  <div id="page-login" class="page active min-h-screen flex">
+  <div class="w-full bg-[#3852B4] flex flex-col items-center justify-center text-white text-center px-10">
+    <h1 class="text-3xl font-bold mb-3">Hello Prospective<br/>Students</h1>
+    <img src="ASSET/UTS/gambar_login page.png" alt="Ilustrasi Student" class="w-50 h-50 object-contain mb-4">
+    <p class="text-sm text-blue-100 max-w-xs mb-1">Unlock your professional potential. Learn from industry leaders and stay ahead of the competition.</p>
+  </div>
+  <div class="w-full bg-[#E8EAF6] flex items-center justify-center px-12">
+    <div class="w-full max-w-sm">
+      <h2 class="text-xl font-bold text-center text-gray-800 mt-1 mb-1">LOGIN PAGE</h2>
+      <p class="text-xs text-center text-gray-400 mb-6">Masukkan Email dan Password Anda</p>
+      <form id="loginForm" novalidate class="space-y-4">
+        <div>
+          <input id="loginEmail" type="email" placeholder="Email Address" class="w-full border border-gray-300 bg-white rounded-md px-4 py-2.5 text-sm focus:outline-none focus:border-[#3852B4] focus:ring-1 focus:ring-[#3852B4]"/>
+          <p id="emailErr" class="text-red-500 text-xs mt-1 hidden"></p>
+        </div>
+        <div class="relative">
+          <input id="loginPassword" type="password" placeholder="Password" class="w-full border border-gray-300 bg-white rounded-md px-4 py-2.5 text-sm focus:outline-none focus:border-[#3852B4] focus:ring-1 focus:ring-[#3852B4]"/>
+          <button type="button" onclick="togglePassword()" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">👁</button>
+          <p id="passErr" class="text-red-500 text-xs mt-1 hidden"></p>
+        </div>
+      <button type="submit" class="w-full bg-[#3852B4] text-white py-3 rounded-md font-semibold flex justify-center">
+        Login
+      </button>
+        <div class="flex items-center gap-2 text-xs text-gray-400">
+            <div class="flex-1 h-px bg-gray-300"></div>
+            Or Login With
+            <div class="flex-1 h-px bg-gray-300"></div>
+        </div>
+        <a href="#" class="flex items-center justify-center gap-3 w-full bg-white border border-gray-300 rounded-lg py-2 shadow-sm hover:bg-gray-100 transition">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5" alt="Google">
+          <span class="text-sm font-medium text-gray-700">Sign in with Google</span>
+        </a>
+      </form>
+      <div id="loginSuccess" class="hidden mt-4 bg-green-50 border border-green-300 text-green-700 text-xs text-center rounded-md px-4 py-2">Good, Login mengalihkan ke halaman</div>
+    </div>
+  </div>
+</div>
+<script src="coba.js"></script>
+</body>
+</html>
