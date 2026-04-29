@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section class="min-h-screen grid md:grid-cols-2">
+        <!-- Left -->
+        <div class="bg-[#5E7AC4] text-white flex flex-col justify-center px-16">
+            <h2 class="text-4xl font-semibold mb-4">Hello Prospective Students</h2>
+            <img src="UTS/gambar_login page.png" alt="">
+            <p class="text-sm">Unlock your professional potential. Learn from industry leaders and stay ahead of the
+                competition.</p>
+        </div>
+
+        <!-- Right -->
+        <div class="flex justify-center items-center">
+            <div>
+                <div class="text-center">
+                    <h3 class="font-bold mb-1">LOGIN PAGE</h3>
+                    <p class="font-bold text-slate-400">Masukkan Username dan Password Anda</p>
+                </div>
+
+                <form id="loginForm" class="w-80 mt-5">
+                    <input id="email" type="text" placeholder="Email Address"
+                        class="w-full mb-1 px-3 py-2 border rounded-md text-blue-700" />
+                    <p id="emailError" class="text-red-500 text-sm mb-2"></p>
+
+                    <input id="password" type="password" placeholder="Password"
+                        class="w-full mb-1 px-3 py-2 border rounded-md" />
+                    <p id="passwordError" class="text-red-500 text-sm mb-2"></p>
+
+                    <button type="submit"
+                        class="w-full bg-[#3852B4] text-white font-semibold py-2 shadow-xl rounded-md mb-3">
+                        Login
+                    </button>
+
+                    <p class="text-center font-bold text-slate-400 mb-3">Or Login With</p>
+
+                    <button type="button"
+                        class="w-full bg-white font-semibold py-2 border shadow-xl rounded-md mb-3 flex items-center justify-center gap-2">
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-4" />
+                        <a href="_blank">Sign in with Google</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<script>
+const form = document.getElementById("loginForm");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const emailError = document.getElementById("emailError");
+const passwordError = document.getElementById("passwordError");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let email = emailInput.value.trim();
+    let password = passwordInput.value.trim();
+
+    emailError.textContent = "";
+    passwordError.textContent = "";
+
+    if (!email) {
+        emailError.textContent = "Email tidak boleh kosong!";
+        return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        emailError.textContent = "Format email tidak valid!";
+        return;
+    }
+
+    if (!password) {
+        passwordError.textContent = "Password tidak boleh kosong!";
+        return;
+    }
+
+    if (password.length < 6) {
+        passwordError.textContent = "Password minimal 6 karakter!";
+        return;
+    }
+
+    alert("Login berhasil!");
+});
+</script>
+</body>
+
+</html>
