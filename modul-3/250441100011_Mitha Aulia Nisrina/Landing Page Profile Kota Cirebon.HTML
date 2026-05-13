@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Kota Cirebon</title>
+
+    <!-- BOOTSRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* HERO */
+      .hero {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.6)), url("Kota Cirebon.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+
+      /* BUTTON */
+      .btn-explore {
+        background-color: #a47148;
+        color: white;
+        transition: 0.3s;
+      }
+
+      .btn-explore:hover {
+        background-color: #5c3a21;
+      }
+
+      /* CARD HOVER */
+      .hover-card {
+        transition: transform 0.3s;
+      }
+
+      .hover-card:hover {
+        transform: scale(1.05);
+      }
+
+      /* SECTION COLORS */
+      .bg-light-custom {
+        background-color: #f5f5f5;
+      }
+
+      .bg-dark-custom {
+        background-color: #212529;
+        color: white;
+      }
+
+      .bg-brown {
+        background-color: #5c3a21;
+        color: white;
+      }
+
+      /* MISI */
+      .misi-card {
+        border-left: 5px solid #a47148;
+      }
+
+      section {
+        scroll-margin-top: 80px;
+      }
+
+      /* KONTAK HOVER */
+      .kontak-link {
+        color: #ffd9b3;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s;
+        letter-spacing: 0.5px;
+      }
+
+      .kontak-link:hover {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <img src="Lambang Kota Cirebon.png" width="40" />
+          <div style="line-height: 1">
+            <small>Pemerintah</small><br />
+            <strong>Kota Cirebon</strong>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#home" class="nav-link">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a href="#profil" class="nav-link">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a href="#visi" class="nav-link">Visi Misi</a>
+            </li>
+            <li class="nav-item">
+              <a href="#layanan" class="nav-link">Layanan</a>
+            </li>
+            <li class="nav-item">
+              <a href="#wisata" class="nav-link">Wisata</a>
+            </li>
+            <li class="nav-item">
+              <a href="#kuliner" class="nav-link">Kuliner</a>
+            </li>
+            <li class="nav-item">
+              <a href="#kontak" class="nav-link">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero text-center">
+      <div class="container">
+        <h1 class="fw-bold display-4">Selamat Datang di Kota Cirebon</h1>
+        <p class="fst-italic">
+          Telusurilah kekayaan sejarah dan pesona budaya kota Wali yang memikat!
+        </p>
+
+        <a href="#profil" class="btn btn-explore mt-3 px-4 py-2"
+          >Explore Sekarang</a
+        >
+      </div>
+    </section>
+
+    <!-- PROFIL -->
+    <section id="profil" class="py-5 bg-light-custom">
+      <div class="container">
+        <h2 class="text-center mb-4">Profil Kota Cirebon</h2>
+
+        <p>
+          Kota Cirebon adalah kota yang terletak di daerah pesisir Pulau Jawa
+          pada bagian timur laut wilayah Jawa Barat berbatasan langsung dengan
+          Laut Jawa mendekati perbatasan Jawa Tengah pada sisi bagian Timur Laut
+          setelah melewati wilayah Kabupaten Cirebon. Kota ini dikenal sebagai
+          Kota Wali yang memiliki kekayaan budaya, sejarah, dan tradisi yang
+          kuat serta menjadi pusat perdagangan dan jasa di wilayah
+          Ciayumajakuning.
+        </p>
+
+        <div class="row text-center mt-4">
+          <div class="col-md-3">
+            <h4>39,46</h4>
+            <p>Luas Wilayah (km²)</p>
+          </div>
+          <div class="col-md-3">
+            <h4>356.629</h4>
+            <p>Jumlah Penduduk</p>
+          </div>
+          <div class="col-md-3">
+            <h4>5</h4>
+            <p>Kecamatan</p>
+          </div>
+          <div class="col-md-3">
+            <h4>22</h4>
+            <p>Kelurahan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISI MISI -->
+    <section id="visi" class="py-5 bg-dark-custom">
+      <div class="container">
+        <h2 class="text-center mb-4">Visi dan Misi Kota Cirebon 2025-2029</h2>
+
+        <div class="mb-4">
+          <h5>VISI :</h5>
+          <p class="fw-bold">
+            “TERWUJUDNYA KOTA CIREBON YANG SEJAHTERA, TERTATA, ASPIRATIF,
+            RELIGIUS, AMAN DAN BERKELANJUTAN TAHUN 2029“
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- MISI 1 -->
+          <div class="col-md-6">
+            <div class="card p-3 misi-card">
+              <h6>Misi Ke-1</h6>
+              <p>“Meningkatkan Kualitas SDM Yang Berdaya Saing.”</p>
+              <small>
+                Tujuan: Terwujudnya SDM yang unggul, kompetitif dan berkarakter.
+              </small>
+            </div>
+          </div>
+
+          <!-- MISI 2 -->
+          <div class="col-md-6">
+            <div class="card p-3 misi-card">
+              <h6>Misi Ke-2</h6>
+              <p>
+                “Meningkatkan Produktifitas Ekonomi Berbasis Kearifan Lokal.”
+              </p>
+              <small>
+                Tujuan: Mewujudkan pertumbuhan ekonomi yang inklusif dan
+                berkelanjutan melalui penguatan sektor unggulan daerah.
+              </small>
+            </div>
+          </div>
+
+          <!-- MISI 3 -->
+          <div class="col-md-6">
+            <div class="card p-3 misi-card">
+              <h6>Misi Ke-3</h6>
+              <p>
+                “Meningkatkan Tata Kelola Pemerintahan Yang Profesional dan
+                Bebas KKN, dengan Sistem Pemerintahan Berbasis Elektronik.”
+              </p>
+              <small>
+                Tujuan: Meningkatnya tata kelola pemerintahan yang transparan,
+                akuntabel, partisipatif dan berorientasi pada pelayanan publik
+                yang berkualitas.
+              </small>
+            </div>
+          </div>
+
+          <!-- MISI 4 -->
+          <div class="col-md-6">
+            <div class="card p-3 misi-card">
+              <h6>Misi Ke-4</h6>
+              <p>
+                “Mewujudkan Keseimbangan serta Pelestarian Lingkungan Hidup
+                Berkelanjutan Dan Berketahanan.”
+              </p>
+              <small>
+                Tujuan: Terwujudnya Penataan Lingkungan Kota yang Berkelanjutan.
+              </small>
+            </div>
+          </div>
+
+          <!-- MISI 5 -->
+          <div class="col-md-6">
+            <div class="card p-3 misi-card">
+              <h6>Misi Ke-5</h6>
+              <p>“Meningkatkan Pemberdayaan Sosial dan Budaya Lokal.”</p>
+              <small>
+                Tujuan: Mewujudkan kesejahteraan sosial melalui penurunan
+                kemiskinan, pemberdayaan masyarakat, pelestarian budaya lokal,
+                dan integrasi kearifan lokal dalam pembangunan.
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAYANAN -->
+    <section id="layanan" class="py-5 bg-light-custom">
+      <div class="container">
+        <h2 class="text-center mb-4">Layanan Kota Cirebon</h2>
+
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card hover-card p-3 text-center">
+              <img src="CCTV Kota Cirebon.jpg" class="img-fluid mb-2" />
+              <h6 class="fw-bold">CCTV Kota Cirebon</h6>
+              <p class="small">
+                Layanan pemantauan kota secara real-time untuk keamanan dan
+                ketertiban masyarakat.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card hover-card p-3 text-center">
+              <img src="Cirebon Satu Data.png" class="img-fluid mb-2" />
+              <h6 class="fw-bold">Cirebon Satu Data</h6>
+              <p class="small">
+                Platform resmi yang menyediakan berbagai data sektoral Kota
+                Cirebon secara terintegrasi, akurat, dan terbuka untuk mendukung
+                transparansi serta pengambilan keputusan berbasis data.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card hover-card p-3 text-center">
+              <img src="Info Pajak.jpg" class="img-fluid mb-2" />
+              <h6 class="fw-bold">Info Pajak</h6>
+              <p class="small">
+                Layanan informasi pajak daerah yang memudahkan masyarakat dalam
+                mengakses data, mengetahui kewajiban pajak, serta melakukan
+                pembayaran pajak secara lebih cepat dan efisien.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card hover-card p-3 text-center">
+              <img src="JDIH Kota Cirebon.png" class="img-fluid mb-2" />
+              <h6 class="fw-bold">JDIH Kota Cirebon</h6>
+              <p class="small">
+                Jaringan Dokumentasi dan Informasi Hukum yang menyediakan akses
+                terhadap peraturan perundang-undangan, kebijakan daerah, serta
+                dokumen hukum lainnya secara lengkap dan mudah diakses.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card hover-card p-3 text-center">
+              <img
+                src="Pengadaan Barang dan Jasa Kota Cirebon.jpg"
+                class="img-fluid mb-2"
+              />
+              <h6 class="fw-bold">Pengadaan Barang dan Jasa Kota Cirebon</h6>
+              <p class="small">
+                Sistem layanan pengadaan barang dan jasa pemerintah yang
+                transparan dan akuntabel untuk memastikan proses pengadaan
+                berjalan secara efisien dan sesuai regulasi.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card hover-card p-3 text-center">
+              <img src="LAPOR Layanan!.png" class="img-fluid mb-2" />
+              <h6 class="fw-bold">LAPOR!</h6>
+              <p class="small">
+                Layanan aspirasi dan pengaduan masyarakat yang memungkinkan
+                warga untuk menyampaikan keluhan, saran, maupun laporan secara
+                langsung kepada pemerintah untuk ditindaklanjuti.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card hover-card p-3 text-center">
+              <img src="PPID Kota Cirebon.png" class="img-fluid mb-2" />
+              <h6 class="fw-bold">PPID Kota Cirebon</h6>
+              <p class="small">
+                Pejabat Pengelola Informasi dan Dokumentasi yang bertugas
+                menyediakan informasi publik secara terbuka, cepat, dan tepat
+                sesuai dengan prinsip keterbukaan informasi.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card hover-card p-3 text-center">
+              <img src="Satu Peta Kota Cirebon.jpg" class="img-fluid mb-2" />
+              <h6 class="fw-bold">Satu Peta Kota Cirebon</h6>
+              <p class="small">
+                Platform peta digital yang menyajikan informasi geospasial Kota
+                Cirebon secara terintegrasi untuk mendukung perencanaan
+                pembangunan dan pengambilan kebijakan berbasis wilayah.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WISATA -->
+    <section id="wisata" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="text-center mb-4">Wisata Kota Cirebon</h2>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card hover-card p-3">
+              <img src="Keraton Kasepuhan.jpg" class="img-fluid mb-2" />
+              <h6 class="fw-bold">Keraton Kasepuhan</h6>
+              <p class="small">
+                Keraton Kasepuhan merupakan keraton tertua di Cirebon yang
+                menjadi pusat sejarah dan budaya dengan arsitektur khas
+                perpaduan Jawa, Sunda, dan Eropa.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card hover-card p-3">
+              <img src="Masjid Agung Cipta Rasa.jpg" class="img-fluid mb-2" />
+              <h6 class="fw-bold">Masjid Agung Sang Cipta Rasa</h6>
+              <p class="small">
+                Masjid bersejarah peninggalan Wali Songo yang memiliki nilai
+                religi tinggi dan menjadi pusat kegiatan keagamaan di Kota
+                Cirebon.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card hover-card p-3">
+              <img src="Taman Ade Irma Suryani.jpg" class="img-fluid mb-2" />
+              <h6 class="fw-bold">Taman Ade Irma Suryani</h6>
+              <p class="small">
+                Taman rekreasi keluarga yang terletak di pesisir laut dengan
+                pemandangan indah serta berbagai wahana hiburan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KULINER -->
+    <section id="kuliner" class="py-5 bg-light-custom">
+      <div class="container">
+        <h2 class="text-center mb-4">Kuliner Khas Cirebon</h2>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card hover-card p-3">
+              <img src="Empal Gentong.webp" class="img-fluid mb-2" />
+              <h6 class="fw-bold">Empal Gentong</h6>
+              <p class="small">
+                Makanan khas Cirebon berupa sup daging sapi dengan kuah santan
+                yang dimasak dalam gentong tanah liat, memiliki cita rasa gurih
+                dan khas.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card hover-card p-3">
+              <img src="Nasi Jamblang.jpg" class="img-fluid mb-2" />
+              <h6 class="fw-bold">Nasi Jamblang</h6>
+              <p class="small">
+                Nasi yang dibungkus daun jati dengan berbagai pilihan lauk khas
+                seperti sambal goreng, tahu, tempe, dan daging.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card hover-card p-3">
+              <img src="Tahu Gejrot.jpg" class="img-fluid mb-2" />
+              <h6 class="fw-bold">Tahu Gejrot</h6>
+              <p class="small">
+                Tahu goreng yang disajikan dengan kuah gula merah, cabai, dan
+                bawang yang memberikan rasa pedas, manis, dan segar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="py-5 bg-brown text-center">
+      <div class="container">
+        <h4 class="fw-bold text-white">Pemerintah Kota Cirebon</h4>
+
+        <p class="text-light small">
+          Jalan Siliwangi Nomor 84, Kelurahan Kebonbaru, Kecamatan Kejaksan,
+          Kota Cirebon, Jawa Barat 45121
+        </p>
+
+        <div class="d-flex flex-wrap justify-content-center gap-4 mt-3">
+          <a href="tel:0231206011" class="kontak-link">Telepon</a>
+
+          <a href="mailto:humas@cirebonkota.go.id" class="kontak-link">Email</a>
+
+          <a href="https://www.instagram.com/pemdakotacrb" class="kontak-link"
+            >Instagram</a
+          >
+
+          <a href="https://www.youtube.com/@pemkotcirebon" class="kontak-link"
+            >YouTube</a
+          >
+
+          <a
+            href="https://www.facebook.com/pemdakotacirebon"
+            class="kontak-link"
+            >Facebook</a
+          >
+
+          <a href="https://x.com/pemdakotacirebon" class="kontak-link">X</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3">
+      Dibuat oleh Mitha Aulia Nisrina | Website Kota Cirebon 2026
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
