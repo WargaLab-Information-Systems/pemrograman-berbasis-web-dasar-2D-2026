@@ -1,0 +1,21 @@
+CREATE DATABASE akademik;
+USE akademik;
+
+CREATE TABLE mahasiswa(
+id INT PRIMARY KEY,
+nim VARCHAR(25) UNIQUE,
+nama VARCHAR(25),
+alamat VARCHAR(25),
+fakultas VARCHAR(25)
+);
+
+ALTER TABLE mahasiswa
+MODIFY id INT AUTO_INCREMENT;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    PASSWORD VARCHAR(255) NOT NULL,
+    ROLE ENUM('admin', 'user') DEFAULT 'user'
+);
+

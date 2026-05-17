@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Dosis:wght@200..800&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+nav {
+      background-color: #706a62;
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      padding: 0 50px;
+    }
+
+
+.logo-text {
+      font-family: "Boldonse", system-ui;
+      font-size: 24px;
+      color: white;
+    }
+
+h2 {
+  margin: 10px;
+  text-align: left;
+  padding-top: 150px;
+  padding-left: 50px;
+  font-family: "Boldonse", system-ui;
+  font-size: 60px;
+  font-style: normal;
+}
+
+span{
+  background-color: blue;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #706a62;
+}
+
+p{
+  font-family: "Dosis", sans-serif;
+  text-align: justify;
+  font-style: normal;
+  padding-left: 50px;
+  font-size: 20px;
+}
+
+ul li {
+  float: right;
+}
+
+ul li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Dosis", sans-serif;
+}
+
+ul li a:hover {
+  background-color: #3f3f3f;
+}
+
+img{
+  width: 500px;
+  float: right;
+  padding-right: 3cm;
+  padding-top: 1cm;
+}
+
+.beli{
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: gray;
+  color: white;
+  font-family: "Dosis", sans-serif;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+
+.beli:hover{
+  background-color: #3f3f3f;
+}
+
+.logo {
+      font-family: "Boldonse", system-ui;
+      font-size: 24px;
+      color: white;
+      padding-left: 50px; 
+      text-decoration: none;
+    }
