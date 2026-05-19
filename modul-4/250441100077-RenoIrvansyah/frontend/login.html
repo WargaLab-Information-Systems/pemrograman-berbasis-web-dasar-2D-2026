@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/output.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="min-h-screen flex flex-col md:flex-row">
+
+        <div class="md:w-350 w-full bg-[#5E7AC4] dark:bg-[#232427] flex flex-col justify-center px-10 md:px-25 py-10">
+            <h1 class="text-3xl md:text-6xl font-semibold text-white">
+                Hello Prospective Students
+            </h1>
+            <img src="../assets/img/gambar_login page.png" class="w-full md:w-300 mb-6" alt="">
+            <h4 class="text-white font-semibold text-sm md:text-2xl max-w-md">
+                Unlock your professional potential. Learn from industry
+                leaders and stay ahead of the competition.
+            </h4>
+        </div>
+
+        <div
+            class="md:w-300 w-full bg-[#eff7ff] dark:bg-[#131313] flex flex-col justify-center items-center px-6 py-10">
+
+            <h1 class="font-semibold text-2xl mb-2 dark:text-white">Login Page</h1>
+            <h4 class="text-[#757575] font-bold text-sm mb-6 text-center dark:text-white">
+                Masukkan Username dan Password Anda
+            </h4>
+
+            <form action="" id="submit" method="post" class="w-full max-w-sm">
+                <input
+                    class="bg-white dark:bg-[#5a5959] dark:text-white shadow-sm w-full py-3 rounded-xl text-center font-bold mb-3"
+                    type="text" id="emailUser" placeholder="Email Address">
+
+                <input
+                    class="bg-white dark:bg-[#5a5959] dark:text-white shadow-sm w-full py-3 rounded-xl text-center font-bold mb-3"
+                    type="password" id="passwordUser" placeholder="Password">
+
+                <button id="btnLogin"
+                    class="bg-[#3852B4] hover:bg-[#2a3d8c] dark:bg-[#2a3d8c] dark:hover:bg-[#3852B4] w-full py-3 rounded-xl font-bold text-white">
+                    Login
+                </button>
+            </form>
+
+            <div class="flex items-center w-full max-w-sm my-5">
+                <span class="grow h-0.5 bg-gray-400"></span>
+                <span class="mx-3 text-sm font-medium dark:text-white">Or Login With</span>
+                <span class="grow h-0.5 bg-gray-400"></span>
+            </div>
+
+            <div class="flex items-center justify-center bg-white shadow w-full max-w-sm py-3 rounded-xl font-bold">
+                <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" class="w-6 mr-2" alt="">
+                <a href="main.html">Sign in with Google</a>
+            </div>
+
+            <div class="flex justify-center items-center mt-5 w-full max-w-sm">
+                <div class="flex gap-2 pr-5">
+                    <span class="text-sm text-black dark:text-white mr-2">Light</span>
+                    <input type="checkbox" class="hidden" id="toggle">
+                    <label for="toggle">
+                        <div
+                            class="w-9 h-5 bg-white dark:bg-black rounded-full flex items-center p-1 cursor-pointer shadow-2xl">
+                            <div class="w-4 h-4 bg-black dark:bg-white rounded-full toggle-circle"></div>
+                        </div>
+                    </label>
+                    <span class="text-sm text-black dark:text-white ml-2">Dark</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script/main.js"></script>
+    <script>
+        const checkbox = document.querySelector("#toggle");
+
+        const html = document.querySelector("html");
+
+        checkbox.addEventListener("click", function () {
+            checkbox.checked ? html.classList.add("dark") : html.classList.remove("dark");
+        });
+    </script>
+</body>
+
+</html>

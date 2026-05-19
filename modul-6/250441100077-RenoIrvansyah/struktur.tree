@@ -1,0 +1,39 @@
+mdl6_praktikum
+ ┣ assets
+ ┃ ┗ img
+ ┃ ┃ ┣ charlie-puth.jpg
+ ┃ ┃ ┣ coldplay.jpg
+ ┃ ┃ ┣ justin-bieber.jpg
+ ┃ ┃ ┣ ticket-bgremove.png
+ ┃ ┃ ┗ ticket.png
+ ┣ auth
+ ┃ ┣ login.php
+ ┃ ┣ logout.php
+ ┃ ┗ register.php
+ ┣ backend
+ ┃ ┣ aside.php
+ ┃ ┣ dashboard.php
+ ┃ ┣ lihatData.php
+ ┃ ┣ nav.php
+ ┃ ┣ tambahData.php
+ ┃ ┗ ubahData.php
+ ┣ database
+ ┃ ┣ img
+ ┃ ┃ ┣ Charlie-Puth-concert.jpg
+ ┃ ┃ ┣ coldplay.jpg
+ ┃ ┃ ┣ justin-bieber.jpg
+ ┃ ┃ ┣ ticket-removebg-preview.png
+ ┃ ┃ ┣ ‼️WalkerWorld Asia Tour Pt. 1 Alan Walker Live in Jakarta 📣As anticipation builds for 2024, Ala (1).jpg
+ ┃ ┃ ┗ ‼️WalkerWorld Asia Tour Pt. 1 Alan Walker Live in Jakarta 📣As anticipation builds for 2024, Ala.jpg
+ ┃ ┗ koneksi.php
+ ┣ node_modules
+ ┃ ┣ isi modules install
+ ┣ partials
+ ┃ ┗ header.php
+ ┣ src
+ ┃ ┣ input.css
+ ┃ ┗ output.css
+ ┣ index.php
+ ┣ konser.php
+ ┣ package-lock.json
+ ┣ package.json

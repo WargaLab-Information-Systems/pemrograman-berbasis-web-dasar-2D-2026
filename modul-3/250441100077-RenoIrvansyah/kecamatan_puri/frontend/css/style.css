@@ -1,0 +1,15 @@
+.jumbotron {
+  padding: 10rem 1rem;
+  background-image: url(../../asset/img/Tugu_UKS_Puri.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lead-jum {
+  background-color: #1c1c1c74;
+}
+
+section {
+  padding-top: 5rem;
+}
