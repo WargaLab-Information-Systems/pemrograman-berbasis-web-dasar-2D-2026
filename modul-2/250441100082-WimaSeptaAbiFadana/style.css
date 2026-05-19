@@ -1,0 +1,92 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 130px;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #646464;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    float: left;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    background-color: #000000;
+    border-radius: 15px;
+}
+
+.body {
+    background-image: url("image/background2.jpg");
+    background-size: cover;
+    width: 100%;
+}
+.produk {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-top: 50px;
+}
+
+.kartu {
+    background-color: rgba(173, 173, 173, 0.795);
+    width : 100%;
+    padding : 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+.nama {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.foto {
+    margin-right: 20px;
+    float: right;
+}
+
+.teks {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 23px;
+}
+
+.profil h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.tombol {
+    background-color: #0000004e;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 100px;
+    margin-top: 20px;
+    float: left;
+}
+
+.tombol:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+
+

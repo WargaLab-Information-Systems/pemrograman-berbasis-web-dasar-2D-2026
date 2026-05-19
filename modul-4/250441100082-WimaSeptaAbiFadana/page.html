@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="transition duration-500 dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>
+    if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+    }
+</script>
+<script>
+    tailwind.config = { darkMode: 'class'}
+</script>
+</head>
+<body class="bg-gray-200 dark:bg-gray-800 transition duration-500">
+        <button id="themeToggle" class="fixed top-5 right-5 bg-gray-300 dark:bg-gray-700 px-3 py-2 rounded-lg shadow-lg">
+            🌙
+        </button>
+    <div class="flex h-screen">
+        <div class="w-1/2 bg-[#5E7AC4] text-white flex flex-col justify-center px-20 dark:text-gray-200 dark:bg-[#2C3E50]">
+            <h1 class="text-5xl font-bold mb-6 leading-tight"> Hello Prospective <br> Students </h1>
+            <img src="image/gambar_login page.png" class="w-150 mb-6" alt="illustration">
+            <p class="text-6x1 leading-relaxed max-w-md font-semibold"> Unlock your professional potential. Learn from industry leaders and stay ahead of the competition.</p>
+        </div>
+        <div class="w-1/2 flex items-center justify-center dark:text-white">
+            <div class="w-80">
+                <form id="loginForm">
+                    <h2 class="text-center font-bold text-lg mb-2">LOGIN PAGE</h2>
+                    <p class="text-center text-sm text-gray-500 mb-6"> Masukkan Username dan Password Anda </p>
+                    <input id="email" type="text" placeholder="Email Address" class="w-full bg-gray-100 dark:bg-gray-500 dark:text-white p-3 mb-4 rounded-lg text-center outline-none shadow-lg">
+                    <p id="emailError" class="text-red-500 text-sm mb-4 hidden">Email tidak valid</p>
+                    <input id="password" type="password" placeholder="Password" class="w-full bg-gray-100 dark:bg-gray-500 dark:text-white p-3 mb-4 rounded-lg text-center outline-none shadow-lg">
+                    <p id="passwordEror" class="text-red-500 text-xs mb-2 hidden">password minimal 6 karakter</p>
+                    <button class="w-full bg-indigo-600 text-white p-3 rounded-lg mb-4 hover:bg-indigo-700 transition duration-300 shadow-lg"> Login </button>
+                    <div class="flex items-center mb-4">
+                        <hr class="flex-1 border-gray-300">
+                        <span class="px-2 text-gray-400 text-sm">Or Login With</span>
+                        <hr class="flex-1 border-gray-300">
+                    </div>
+                        <button id="submit" class="w-full bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-500 dark:text-white p-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-200 transition duration-300 mb-4 shadow-lg">
+                            <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5">
+                            <span class="text-sm">Sign in with Google</span>
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="dark.js"></script>
+</body>
+</html>
