@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="min-h-screen grid md:grid-cols-2">
+        <div class="bg-[#E9C27B] flex flex-col justify-center px-12">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold leading-tight">
+                    Hello Prospective <br> Students
+                </h1>
+                <p class="mt-6">
+                    Unlock your professional potential. Learn from industry leaders
+                    and stay ahead of the competition.
+                </p>
+            </div>
+        </div>
+        <div class="flex items-center justify-center bg-neutral-50">
+            <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
+                <h2 class="text-center text-xl font-semibold text-gray-700">
+                    LOGIN PAGE
+                </h2>
+                <p class="text-center text-sm text-gray-500 mt-1">
+                    Masukkan Username dan Password Anda
+                </p>
+                <form id="loginForm" class="mt-6 space-y-4">
+                    <input id="email" type="text" placeholder="Email Address"
+                        class="w-full px-4 py-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <p id="emailError" class="text-red-500 text-sm hidden"></p>
+                    <input id="password" type="password" placeholder="Password"
+                        class="w-full px-4 py-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <p id="passwordError" class="text-red-500 text-sm hidden"></p>
+                    <button type="submit"
+                        class="w-full mt-3 bg-[#6C63FF] hover:bg-[#5a52e0] text-white py-3 rounded-lg shadow">
+                        Login
+                    </button>
+                </form>
+                <div class="text-center text-sm text-gray-400 mt-4">
+                    Or Login With
+                </div>
+                <button
+                    class="w-full mt-3 flex items-center justify-center gap-2 bg-gray-100 py-3 rounded-lg shadow hover:bg-gray-200">
+                    <img src="ASSET/UTS/logo google.jpg" class="w-10">
+                    <span class="text-sm font-bold">Sign in with Google</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
