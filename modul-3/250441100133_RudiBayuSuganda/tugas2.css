@@ -1,0 +1,23 @@
+.bagian_utama {
+    background: url('fotodesa.jpeg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.home{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.49);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.card {
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
