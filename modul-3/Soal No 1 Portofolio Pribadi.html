@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Saya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+});
+</script>
+
+<body class="bg-gray-100 text-gray-800 scroll-smooth">
+  
+  <nav class="bg-white shadow-md fixed w-full top-0 z-10">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-xl font-bold">MyPortfolio</h1>
+
+    <div class="hidden md:flex space-x-4">
+      <a href="#about" class="hover:text-blue-500">About</a>
+      <a href="#skills" class="hover:text-blue-500">Skills</a>
+      <a href="#projects" class="hover:text-blue-500">Projects</a>
+      <a href="#contact" class="hover:text-blue-500">Contact</a>
+    </div>
+
+    <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+  </div>
+  
+
+  <div id="menu" class="hidden flex flex-col items-center bg-white pb-4">
+    <a href="#about" class="py-2">About</a>
+    <a href="#skills" class="py-2">Skills</a>
+    <a href="#projects" class="py-2">Projects</a>
+    <a href="#contact" class="py-2">Contact</a>
+  </div>
+</nav>
+
+  <section class="h-screen flex items-center justify-center bg-blue-500 text-white text-center pt-20 scroll-mt-20">
+    <div>
+      <img src="DSC.jpg.jpeg" 
+      class="mx-auto w-40 h-40 object-cover rounded-full border-4 border-white shadow-lg mb-4">
+      <h2 class="text-4xl font-bold">akbar Imam Maulana</h2>
+      <p class="mt-2">Mahasiswa Sistem Informasi | Web Developer</p>
+    </div>
+  </section>
+
+  <section id="about" class="py-16 max-w-6xl mx-auto px-4 scroll-mt-20">
+    <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+    <p class="text-center max-w-2xl mx-auto">
+      Saya adalah mahasiswa yang memiliki minat di bidang web development, khususnya dalam membuat tampilan website yang menarik dan responsif.
+    </p>
+  </section>
+
+  <section id="skills" class="py-16 bg-white scroll-mt-20">
+    <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto px-4">
+      <div class="bg-blue-100 p-4 text-center rounded hover:bg-blue-500 hover:text-white transition">HTML</div>
+      <div class="bg-blue-100 p-4 text-center rounded hover:bg-blue-500 hover:text-white transition">CSS</div>
+      <div class="bg-blue-100 p-4 text-center rounded hover:bg-blue-500 hover:text-white transition">JavaScript</div>
+      <div class="bg-blue-100 p-4 text-center rounded hover:bg-blue-500 hover:text-white transition">Tailwind</div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-16 max-w-6xl mx-auto px-4 scroll-mt-20">
+    <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-6 max-w-3xl mx-auto px-4">
+      <div class="bg-white shadow rounded p-4 hover:scale-105 transition">
+        <img src="https://via.placeholder.com/300" class="rounded mb-3">
+        <h3 class="font-bold">Project 1</h3>
+        <p class="text-sm">Deskripsi project kamu</p>
+      </div> 
+
+      <div class="bg-white shadow rounded p-4 hover:scale-105 transition">
+        <img src="https://via.placeholder.com/300" class="rounded mb-3">
+        <h3 class="font-bold">Project 2</h3>
+        <p class="text-sm">Deskripsi project kamu</p>
+      </div>
+
+      <div class="bg-white shadow rounded p-4 hover:scale-105 transition">
+        <img src="https://via.placeholder.com/300" class="rounded mb-3">
+        <h3 class="font-bold">Project 3</h3>
+        <p class="text-sm">Deskripsi project kamu</p>
+      </div>
+
+      <div class="bg-white shadow rounded p-4 hover:scale-105 transition">
+        <img src="https://via.placeholder.com/300" class="rounded mb-3">
+        <h3 class="font-bold">Project 4</h3>
+        <p class="text-sm">Deskripsi project kamu</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 bg-blue-500 text-white">
+    <h2 class="text-3xl font-bold text-center mb-8">Contact</h2>
+
+    <div class="flex flex-col items-center space-y-3">
+      <p>Email: akbarimammaulana@gmail.com</p>
+      <p>Instagram: @akbarimammaulana</p>
+      <p>LinkedIn: Akbar Imam Maulana</p>
+    </div>
+  </section>
+
+  <footer class="text-center p-4 bg-white">
+    <p>© 2026 Portfolio Pribadi</p>
+  </footer>
+
+</body>
+</html>

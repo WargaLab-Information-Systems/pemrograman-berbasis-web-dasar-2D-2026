@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <header class="bg-white shadow-md fixed w-full z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold text-blue-600">PerusahaanKu</h1>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="pt-24 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 items-center gap-10">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Solusi Digital untuk Bisnis Anda</h2>
+        <p class="mb-6 text-lg">Kami membantu perusahaan berkembang dengan teknologi modern dan inovatif.</p>
+        <button class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200">Mulai Sekarang</button>
+      </div>
+      <img src="https://via.placeholder.com/500" class="rounded-xl shadow-lg" alt="Hero">
+    </div>
+  </section>
+
+  <section id="about" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <img src="https://via.placeholder.com/500" class="rounded-xl shadow" alt="About">
+      <div>
+        <h3 class="text-3xl font-bold mb-4">Tentang Kami</h3>
+        <p class="text-gray-600 mb-4">Kami adalah perusahaan yang bergerak di bidang teknologi informasi dan pengembangan software. Fokus kami adalah memberikan solusi terbaik untuk klien.</p>
+        <p class="text-gray-600">Dengan tim profesional, kami siap membantu transformasi digital bisnis Anda.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-gray-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-10">Layanan Kami</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+          <h4 class="text-xl font-bold mb-3">Website Development</h4>
+          <p class="text-gray-600">Pembuatan website profesional dan responsif.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+          <h4 class="text-xl font-bold mb-3">Mobile App</h4>
+          <p class="text-gray-600">Aplikasi Android & iOS sesuai kebutuhan bisnis.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+          <h4 class="text-xl font-bold mb-3">UI/UX Design</h4>
+          <p class="text-gray-600">Desain modern dan user-friendly.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-6">Kontak Kami</h3>
+      <p class="mb-2">Email: info@perusahaanku.com</p>
+      <p class="mb-6">Telepon: +62 812 3456 7890</p>
+
+      <form class="max-w-xl mx-auto space-y-4">
+        <input type="text" placeholder="Nama" class="w-full p-3 border rounded-lg">
+        <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg">
+        <textarea placeholder="Pesan" class="w-full p-3 border rounded-lg"></textarea>
+        <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <p>&copy; 2026 PerusahaanKu. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

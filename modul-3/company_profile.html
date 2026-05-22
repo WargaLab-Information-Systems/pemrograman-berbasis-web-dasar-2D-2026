@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexaCore — Inovasi Digital Tanpa Batas</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0e0e0e;
+    --cream: #f5f0e8;
+    --accent: #c8a96e;
+    --accent-dark: #a07840;
+    --muted: #6b6b6b;
+    --surface: #1a1a1a;
+    --card-bg: #f9f6f0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    background: rgba(245,240,232,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,169,110,0.2);
+    padding: 1rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  .nav-logo span { color: var(--accent); }
+
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none; color: var(--muted);
+    font-size: 0.875rem; font-weight: 500;
+    transition: color 0.2s;
+    letter-spacing: 0.03em;
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+
+  .nav-cta {
+    background: var(--ink); color: var(--cream);
+    padding: 0.5rem 1.25rem; border-radius: 2px;
+    font-size: 0.8rem; font-weight: 500;
+    text-decoration: none; letter-spacing: 0.05em;
+    transition: background 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--accent); color: var(--ink); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    padding-left: 6rem; padding-right: 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; top: -10%; right: -5%;
+    width: 55%; height: 110%;
+    background: var(--surface);
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+
+  .hero-text { position: relative; z-index: 1; }
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.75rem; font-weight: 500;
+    letter-spacing: 0.15em; color: var(--accent);
+    text-transform: uppercase; margin-bottom: 1.5rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block; width: 32px; height: 1px;
+    background: var(--accent);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    color: var(--ink);
+  }
+
+  .hero h1 em {
+    font-style: italic; color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 1rem; line-height: 1.7;
+    color: var(--muted); max-width: 440px;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--ink); color: var(--cream);
+    padding: 0.875rem 2rem; border-radius: 2px;
+    font-size: 0.875rem; font-weight: 500;
+    text-decoration: none; letter-spacing: 0.04em;
+    transition: all 0.2s; display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--accent); color: var(--ink); }
+
+  .btn-outline {
+    color: var(--ink); padding: 0.875rem 1.5rem;
+    font-size: 0.875rem; font-weight: 500;
+    text-decoration: none; letter-spacing: 0.04em;
+    border-bottom: 1.5px solid var(--ink);
+    transition: all 0.2s; display: inline-block;
+  }
+
+  .btn-outline:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* Hero right panel */
+  .hero-visual {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+
+  .stat-cards {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+  }
+
+  .stat-card {
+    background: rgba(245,240,232,0.1);
+    border: 1px solid rgba(200,169,110,0.3);
+    border-radius: 4px; padding: 1.5rem;
+    text-align: center;
+  }
+
+  .stat-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem; font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .stat-card .lbl {
+    font-size: 0.75rem; color: #b0a090;
+    margin-top: 0.4rem; letter-spacing: 0.05em;
+  }
+
+  .hero-badge {
+    background: rgba(200,169,110,0.15);
+    border: 1px solid rgba(200,169,110,0.4);
+    border-radius: 4px; padding: 1rem 1.5rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+
+  .hero-badge .icon-box {
+    width: 40px; height: 40px;
+    background: var(--accent); border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .hero-badge .icon-box svg { width: 20px; height: 20px; stroke: #1a1a1a; fill: none; stroke-width: 2; }
+  .hero-badge .badge-text p { font-size: 0.75rem; color: #b0a090; }
+  .hero-badge .badge-text strong { font-size: 0.9rem; color: var(--cream); font-weight: 500; }
+
+  /* SECTION COMMON */
+  section { padding: 6rem 6rem; }
+
+  .section-tag {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .section-tag::before {
+    content: ''; display: block; width: 24px; height: 1px;
+    background: var(--accent);
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 900; letter-spacing: -0.03em;
+    line-height: 1.1; color: var(--ink);
+  }
+
+  .section-title em { font-style: italic; color: var(--accent); }
+
+  /* ABOUT */
+  .about {
+    background: white;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: center;
+  }
+
+  .about-img-block {
+    position: relative;
+  }
+
+  .about-img-main {
+    background: var(--surface);
+    border-radius: 4px;
+    height: 420px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .about-img-main .geometric {
+    width: 200px; height: 200px;
+    border: 2px solid var(--accent);
+    border-radius: 50%; position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .about-img-main .geometric::before {
+    content: '';
+    position: absolute; width: 140px; height: 140px;
+    background: var(--accent); border-radius: 50%; opacity: 0.15;
+  }
+
+  .about-img-main .geometric::after {
+    content: 'NC';
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; font-weight: 900; color: var(--accent);
+    z-index: 1;
+  }
+
+  .about-float {
+    position: absolute; bottom: -20px; right: -20px;
+    background: var(--accent); color: var(--ink);
+    padding: 1.25rem 1.5rem; border-radius: 4px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .about-float .yr { font-size: 2.5rem; font-weight: 900; line-height: 1; }
+  .about-float .yr-lbl { font-size: 0.75rem; font-weight: 400; }
+
+  .about-content p {
+    font-size: 1rem; line-height: 1.8;
+    color: var(--muted); margin-bottom: 1rem;
+  }
+
+  .about-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .about-list li {
+    display: flex; align-items: center; gap: 0.75rem;
+    font-size: 0.9rem; color: var(--ink); list-style: none;
+  }
+
+  .about-list li::before {
+    content: '';
+    width: 8px; height: 8px;
+    background: var(--accent); border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* SERVICES */
+  .services { background: var(--cream); }
+
+  .services-header {
+    display: flex; justify-content: space-between;
+    align-items: flex-end; margin-bottom: 3rem;
+    flex-wrap: wrap; gap: 1rem;
+  }
+
+  .services-desc {
+    max-width: 380px; font-size: 0.95rem;
+    line-height: 1.7; color: var(--muted);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    background: white; border-radius: 4px;
+    padding: 2rem; border: 1px solid rgba(0,0,0,0.06);
+    transition: all 0.25s; position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: var(--accent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+
+  .service-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; font-weight: 900;
+    color: rgba(200,169,110,0.15);
+    line-height: 1; margin-bottom: 1rem;
+    letter-spacing: -0.04em;
+  }
+
+  .service-icon {
+    width: 48px; height: 48px;
+    background: #f5f0e8; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-icon svg { width: 24px; height: 24px; stroke: var(--accent-dark); fill: none; stroke-width: 1.5; }
+
+  .service-card h3 {
+    font-size: 1.1rem; font-weight: 700;
+    margin-bottom: 0.75rem; color: var(--ink);
+  }
+
+  .service-card p { font-size: 0.875rem; line-height: 1.7; color: var(--muted); }
+
+  /* PORTFOLIO */
+  .portfolio { background: var(--ink); padding: 6rem; }
+
+  .portfolio .section-title { color: var(--cream); }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem; margin-top: 3rem;
+  }
+
+  .port-item {
+    border-radius: 4px; overflow: hidden;
+    position: relative;
+    background: #2a2a2a;
+    min-height: 220px;
+    display: flex; align-items: flex-end;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .port-item:hover { transform: scale(1.01); }
+
+  .port-item:nth-child(1) { grid-column: span 7; }
+  .port-item:nth-child(2) { grid-column: span 5; }
+  .port-item:nth-child(3) { grid-column: span 4; }
+  .port-item:nth-child(4) { grid-column: span 5; }
+  .port-item:nth-child(5) { grid-column: span 3; }
+
+  .port-bg {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem; font-weight: 900;
+    color: rgba(255,255,255,0.04);
+    letter-spacing: -0.05em;
+    user-select: none;
+  }
+
+  .port-accent { position: absolute; inset: 0; opacity: 0.12; }
+
+  .port-p1 .port-accent { background: #c8a96e; }
+  .port-p2 .port-accent { background: #5dcaa5; }
+  .port-p3 .port-accent { background: #d85a30; }
+  .port-p4 .port-accent { background: #7f77dd; }
+  .port-p5 .port-accent { background: #c8a96e; }
+
+  .port-info {
+    position: relative; z-index: 1;
+    padding: 1.25rem; width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .port-tag {
+    font-size: 0.65rem; color: var(--accent);
+    letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 0.3rem; font-weight: 500;
+  }
+
+  .port-name {
+    font-size: 0.95rem; font-weight: 500;
+    color: var(--cream); font-family: 'Playfair Display', serif;
+  }
+
+  /* TEAM */
+  .team { background: var(--card-bg); }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem; margin-top: 3rem;
+  }
+
+  .team-card {
+    text-align: center;
+  }
+
+  .team-avatar {
+    width: 96px; height: 96px;
+    border-radius: 50%; margin: 0 auto 1rem;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; font-weight: 700;
+    border: 2px solid var(--accent);
+  }
+
+  .av1 { background: #e8e0d4; color: #a07840; }
+  .av2 { background: #dce8e0; color: #2d7a5a; }
+  .av3 { background: #e0dce8; color: #534ab7; }
+  .av4 { background: #e8dcd4; color: #994030; }
+
+  .team-card h4 { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 0.25rem; }
+  .team-card .role { font-size: 0.8rem; color: var(--accent); font-weight: 500; letter-spacing: 0.04em; }
+  .team-card .bio { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.6; }
+
+  /* TESTIMONIALS */
+  .testimonials { background: white; }
+
+  .testi-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 3rem;
+  }
+
+  .testi-card {
+    background: var(--card-bg); border-radius: 4px;
+    padding: 1.75rem; border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .testi-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; color: var(--accent);
+    line-height: 1; margin-bottom: 0.5rem;
+  }
+
+  .testi-card p { font-size: 0.9rem; line-height: 1.8; color: var(--muted); margin-bottom: 1.25rem; }
+
+  .testi-author { display: flex; align-items: center; gap: 0.75rem; }
+  .testi-dot { width: 36px; height: 36px; border-radius: 50%; background: var(--accent); opacity: 0.4; }
+
+  .testi-author-name { font-size: 0.85rem; font-weight: 500; color: var(--ink); }
+  .testi-author-co { font-size: 0.75rem; color: var(--muted); }
+
+  /* CTA */
+  .cta-section {
+    background: var(--ink);
+    padding: 6rem;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: 'CTA';
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 18rem; font-weight: 900;
+    color: rgba(200,169,110,0.04);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: -0.05em;
+    user-select: none;
+  }
+
+  .cta-section h2 {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 900; color: var(--cream);
+    letter-spacing: -0.03em; line-height: 1.1;
+    margin-bottom: 1.25rem; position: relative; z-index: 1;
+  }
+
+  .cta-section h2 em { font-style: italic; color: var(--accent); }
+  .cta-section p { font-size: 1rem; color: #9a9a9a; margin-bottom: 2.5rem; position: relative; z-index: 1; }
+
+  .cta-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; position: relative; z-index: 1; }
+
+  .btn-gold {
+    background: var(--accent); color: var(--ink);
+    padding: 1rem 2.5rem; border-radius: 2px;
+    font-size: 0.9rem; font-weight: 500;
+    text-decoration: none; letter-spacing: 0.04em;
+    transition: all 0.2s; display: inline-block;
+  }
+
+  .btn-gold:hover { background: #e0c080; }
+
+  .btn-ghost {
+    color: var(--cream); padding: 1rem 2rem;
+    font-size: 0.9rem; font-weight: 400;
+    text-decoration: none; letter-spacing: 0.04em;
+    border: 1px solid rgba(255,255,255,0.2); border-radius: 2px;
+    transition: all 0.2s; display: inline-block;
+  }
+
+  .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+
+  /* FOOTER */
+  footer {
+    background: #080808;
+    padding: 3rem 6rem 2rem;
+  }
+
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem; padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .footer-brand .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 900; color: var(--cream);
+    margin-bottom: 1rem;
+  }
+
+  .footer-brand .logo span { color: var(--accent); }
+  .footer-brand p { font-size: 0.85rem; line-height: 1.7; color: #666; max-width: 280px; }
+
+  .footer-col h5 { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; font-family: 'DM Sans', sans-serif; }
+
+  .footer-col a { display: block; font-size: 0.85rem; color: #777; text-decoration: none; margin-bottom: 0.6rem; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--cream); }
+
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 1.5rem; flex-wrap: wrap; gap: 0.5rem;
+  }
+
+  .footer-bottom p { font-size: 0.78rem; color: #444; }
+
+  /* SCROLL ANIM */
+  .fade-up {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Nexa<span>Core</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">Tentang</a></li>
+    <li><a href="#services">Layanan</a></li>
+    <li><a href="#portfolio">Portofolio</a></li>
+    <li><a href="#team">Tim</a></li>
+    <li><a href="#contact">Kontak</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Mulai Proyek</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text fade-up">
+    <div class="hero-eyebrow">Digital Excellence Since 2018</div>
+    <h1>Kami Bangun<br>Masa Depan <em>Digital</em><br>Bisnis Anda</h1>
+    <p class="hero-sub">NexaCore adalah perusahaan teknologi terdepan yang menghadirkan solusi digital inovatif — dari desain UI/UX premium hingga sistem enterprise yang skalabel.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">Eksplorasi Layanan</a>
+      <a href="#portfolio" class="btn-outline">Lihat Portofolio</a>
+    </div>
+  </div>
+
+  <div class="hero-visual fade-up" style="transition-delay:0.2s">
+    <div class="stat-cards">
+      <div class="stat-card">
+        <div class="num">250+</div>
+        <div class="lbl">Proyek Selesai</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">98%</div>
+        <div class="lbl">Kepuasan Klien</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">40+</div>
+        <div class="lbl">Tenaga Ahli</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">6</div>
+        <div class="lbl">Tahun Pengalaman</div>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="badge-text">
+        <p>Teknologi terpilih 2024</p>
+        <strong>Top 10 Tech Agency Indonesia</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-img-block fade-up">
+    <div class="about-img-main">
+      <div class="geometric"></div>
+    </div>
+    <div class="about-float">
+      <div class="yr">6+</div>
+      <div class="yr-lbl">Tahun memimpin<br>industri digital</div>
+    </div>
+  </div>
+
+  <div class="about-content fade-up" style="transition-delay:0.15s">
+    <div class="section-tag">Tentang Kami</div>
+    <h2 class="section-title" style="margin-bottom:1.5rem">Driven by <em>Innovation</em>, Built on Trust</h2>
+    <p>NexaCore berdiri tahun 2018 dengan satu misi: menjembatani kesenjangan antara bisnis dan teknologi. Kami percaya bahwa setiap perusahaan, besar maupun kecil, berhak mendapatkan solusi digital berkelas dunia.</p>
+    <p>Dengan tim multidisiplin yang berpengalaman, kami telah membantu lebih dari 200 klien dari berbagai sektor—retail, keuangan, kesehatan, hingga pemerintahan—untuk bertransformasi secara digital.</p>
+    <ul class="about-list">
+      <li>Tim bersertifikat Google, AWS, dan Microsoft Azure</li>
+      <li>Metodologi Agile & DevOps terintegrasi</li>
+      <li>Dukungan purna jual 24/7 selama 12 bulan</li>
+      <li>Keamanan data standar ISO 27001</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header">
+    <div>
+      <div class="section-tag">Layanan Kami</div>
+      <h2 class="section-title">Solusi <em>Lengkap</em><br>untuk Setiap Kebutuhan</h2>
+    </div>
+    <p class="services-desc">Dari ideasi hingga deployment, kami menjadi mitra teknologi penuh yang menemani setiap tahap perjalanan digital Anda.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card fade-up">
+      <div class="service-num">01</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <h3>UI/UX Design</h3>
+      <p>Desain antarmuka yang intuitif, estetik, dan berpusat pada pengalaman pengguna. Kami memastikan setiap piksel memiliki tujuan.</p>
+    </div>
+
+    <div class="service-card fade-up" style="transition-delay:0.1s">
+      <div class="service-num">02</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <h3>Pengembangan Web & Mobile</h3>
+      <p>Aplikasi web dan mobile dengan performa tinggi menggunakan stack teknologi modern — React, Next.js, Flutter, dan Node.js.</p>
+    </div>
+
+    <div class="service-card fade-up" style="transition-delay:0.2s">
+      <div class="service-num">03</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      </div>
+      <h3>Cloud & Infrastruktur</h3>
+      <p>Arsitektur cloud yang andal, skalabel, dan hemat biaya. Migrasi, optimasi, dan manajemen infrastruktur digital bisnis Anda.</p>
+    </div>
+
+    <div class="service-card fade-up" style="transition-delay:0.1s">
+      <div class="service-num">04</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Keamanan Siber</h3>
+      <p>Proteksi menyeluruh untuk aset digital Anda: penetration testing, audit keamanan, dan implementasi standar keamanan terkini.</p>
+    </div>
+
+    <div class="service-card fade-up" style="transition-delay:0.2s">
+      <div class="service-num">05</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      </div>
+      <h3>Data & Analytics</h3>
+      <p>Ubah data mentah menjadi wawasan bisnis yang actionable. Dashboard BI, data pipeline, hingga implementasi machine learning.</p>
+    </div>
+
+    <div class="service-card fade-up" style="transition-delay:0.3s">
+      <div class="service-num">06</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 15.54a5 5 0 0 1 0-7.07"/></svg>
+      </div>
+      <h3>Konsultasi Digital</h3>
+      <p>Strategi transformasi digital yang komprehensif. Kami membantu Anda memetakan roadmap teknologi yang tepat untuk pertumbuhan bisnis.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="section-tag" style="color:var(--accent)">Portofolio</div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem">
+    <h2 class="section-title">Karya yang <em>Berbicara</em><br>Sendiri</h2>
+    <a href="#" style="color:var(--accent);font-size:0.85rem;text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px">Lihat Semua Proyek →</a>
+  </div>
+
+  <div class="portfolio-grid">
+    <div class="port-item port-p1 fade-up">
+      <div class="port-bg">FIN</div>
+      <div class="port-accent"></div>
+      <div class="port-info">
+        <div class="port-tag">Fintech · Web App</div>
+        <div class="port-name">BankNova — Platform Perbankan Digital</div>
+      </div>
+    </div>
+    <div class="port-item port-p2 fade-up" style="transition-delay:0.1s">
+      <div class="port-bg">EDU</div>
+      <div class="port-accent"></div>
+      <div class="port-info">
+        <div class="port-tag">Edukasi · Mobile</div>
+        <div class="port-name">LearnPath — App Pembelajaran Adaptif</div>
+      </div>
+    </div>
+    <div class="port-item port-p3 fade-up" style="transition-delay:0.15s">
+      <div class="port-bg">RET</div>
+      <div class="port-accent"></div>
+      <div class="port-info">
+        <div class="port-tag">Retail · E-Commerce</div>
+        <div class="port-name">Modalku Store</div>
+      </div>
+    </div>
+    <div class="port-item port-p4 fade-up" style="transition-delay:0.2s">
+      <div class="port-bg">GOV</div>
+      <div class="port-accent"></div>
+      <div class="port-info">
+        <div class="port-tag">Government · Dashboard</div>
+        <div class="port-name">DataKota — Sistem Monitoring Kota</div>
+      </div>
+    </div>
+    <div class="port-item port-p5 fade-up" style="transition-delay:0.25s">
+      <div class="port-bg">HLT</div>
+      <div class="port-accent"></div>
+      <div class="port-info">
+        <div class="port-tag">Healthcare · SaaS</div>
+        <div class="port-name">MediTrack</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="section-tag">Tim Kami</div>
+  <h2 class="section-title">Otak di Balik <em>Inovasi</em></h2>
+
+  <div class="team-grid">
+    <div class="team-card fade-up">
+      <div class="team-avatar av1">AR</div>
+      <h4>Arya Ramadhan</h4>
+      <div class="role">CEO & Co-Founder</div>
+      <p class="bio">Visioner dengan 12 tahun pengalaman di industri teknologi. Ex-Google, Ex-Gojek.</p>
+    </div>
+    <div class="team-card fade-up" style="transition-delay:0.1s">
+      <div class="team-avatar av2">SP</div>
+      <h4>Sari Pertiwi</h4>
+      <div class="role">CTO</div>
+      <p class="bio">Arsitek sistem terdistribusi. Spesialisasi cloud-native dan microservices architecture.</p>
+    </div>
+    <div class="team-card fade-up" style="transition-delay:0.2s">
+      <div class="team-avatar av3">BN</div>
+      <h4>Bintang Nugroho</h4>
+      <div class="role">Head of Design</div>
+      <p class="bio">Desainer produk dengan filosofi "simplicity is the ultimate sophistication".</p>
+    </div>
+    <div class="team-card fade-up" style="transition-delay:0.3s">
+      <div class="team-avatar av4">DH</div>
+      <h4>Dewi Hartanti</h4>
+      <div class="role">Head of Strategy</div>
+      <p class="bio">Konsultan digital transformasi dengan rekam jejak di 50+ perusahaan Fortune 500.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div style="text-align:center;margin-bottom:0.5rem">
+    <div class="section-tag" style="justify-content:center">Testimoni</div>
+    <h2 class="section-title">Apa Kata <em>Klien</em> Kami</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card fade-up">
+      <div class="testi-quote">"</div>
+      <p>NexaCore benar-benar mengubah cara kami beroperasi. Platform yang mereka bangun meningkatkan efisiensi operasional kami hingga 60% dalam 3 bulan pertama.</p>
+      <div class="testi-author">
+        <div class="testi-dot"></div>
+        <div>
+          <div class="testi-author-name">Rudi Santoso</div>
+          <div class="testi-author-co">CEO, PT Mandiri Logistik</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card fade-up" style="transition-delay:0.1s">
+      <div class="testi-quote">"</div>
+      <p>Tim NexaCore sangat profesional dan responsif. Mereka tidak hanya membangun produk, tapi benar-benar memahami kebutuhan bisnis kami secara mendalam.</p>
+      <div class="testi-author">
+        <div class="testi-dot" style="background:#5dcaa5"></div>
+        <div>
+          <div class="testi-author-name">Maya Indira</div>
+          <div class="testi-author-co">CTO, StartupKu.id</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card fade-up" style="transition-delay:0.2s">
+      <div class="testi-quote">"</div>
+      <p>Kualitas desain dan kode yang mereka deliver melampaui ekspektasi kami. Proyek selesai tepat waktu dengan hasil yang luar biasa. Sangat direkomendasikan!</p>
+      <div class="testi-author">
+        <div class="testi-dot" style="background:#7f77dd"></div>
+        <div>
+          <div class="testi-author-name">Andi Prasetyo</div>
+          <div class="testi-author-co">Founder, EduNext Indonesia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <h2>Siap Memulai<br>Perjalanan <em>Digital</em> Anda?</h2>
+  <p>Konsultasi gratis 60 menit dengan tim ahli kami. Tanpa komitmen, tanpa biaya.</p>
+  <div class="cta-actions">
+    <a href="mailto:hello@nexacore.id" class="btn-gold">Konsultasi Gratis</a>
+    <a href="tel:+6221123456" class="btn-ghost">+62 21 123-4567</a>
+  </div>
+  <p style="margin-top:2rem;font-size:0.8rem;color:#555">hello@nexacore.id · Jl. Sudirman No. 88, Jakarta Selatan 12190</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">Nexa<span>Core</span></div>
+      <p>Mitra teknologi terpercaya untuk bisnis yang ingin tumbuh di era digital. Inovasi tanpa kompromi.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Layanan</h5>
+      <a href="#">UI/UX Design</a>
+      <a href="#">Web Development</a>
+      <a href="#">Mobile Apps</a>
+      <a href="#">Cloud & DevOps</a>
+      <a href="#">Data Analytics</a>
+    </div>
+    <div class="footer-col">
+      <h5>Perusahaan</h5>
+      <a href="#">Tentang Kami</a>
+      <a href="#">Tim</a>
+      <a href="#">Karir</a>
+      <a href="#">Blog</a>
+      <a href="#">Press Kit</a>
+    </div>
+    <div class="footer-col">
+      <h5>Kontak</h5>
+      <a href="#">hello@nexacore.id</a>
+      <a href="#">+62 21 123-4567</a>
+      <a href="#">Jakarta, Indonesia</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 NexaCore Technology. Seluruh hak cipta dilindungi.</p>
+    <p>Dibuat dengan presisi & dedikasi di Indonesia 🇮🇩</p>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

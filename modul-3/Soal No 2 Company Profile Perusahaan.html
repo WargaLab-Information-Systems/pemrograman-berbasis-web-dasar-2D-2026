@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">MyCompany</h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#" class="hover:text-blue-600">Home</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="bg-blue-600 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-4">Solusi Digital Terbaik</h2>
+      <p class="mb-6">Kami membantu bisnis Anda berkembang dengan teknologi modern.</p>
+      <a href="#contact" class="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold">Hubungi Kami</a>
+    </div>
+  </section>
+
+  <section id="about" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <img src="foto.jpeg" alt="About" class="rounded-lg shadow">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">Tentang Kami</h3>
+        <p class="mb-4">Kami adalah perusahaan yang bergerak di bidang teknologi informasi dengan fokus pada pengembangan website dan aplikasi.</p>
+        <p>Kami memiliki tim profesional yang siap membantu kebutuhan digital Anda.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-gray-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h3 class="text-2xl font-bold mb-10">Layanan Kami</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold mb-2">Web Development</h4>
+          <p>Membuat website modern dan responsif.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold mb-2">Mobile Apps</h4>
+          <p>Pengembangan aplikasi Android dan iOS.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold mb-2">UI/UX Design</h4>
+          <p>Desain antarmuka yang menarik dan user-friendly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-2xl font-bold text-center mb-8">Kontak Kami</h3>
+      <form class="max-w-xl mx-auto space-y-4">
+      <form action="https://formspree.io/f/mdapbenj" method="post" enctype="multipart/form-data">
+        <input type="text" placeholder="Nama" class="w-full border p-3 rounded">
+        <input type="email" placeholder="Email" class="w-full border p-3 rounded">
+        <textarea placeholder="Pesan" class="w-full border p-3 rounded"></textarea>
+        <button class="bg-blue-600 text-white px-6 py-2 rounded">Kirim</button>
+      </form>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2026 MyCompany. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

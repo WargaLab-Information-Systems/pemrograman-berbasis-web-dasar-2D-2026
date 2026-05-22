@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontak - Nescafé</title>
+
+  <style>
+
+    * { margin: 0;  padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+
+    body {
+      background: linear-gradient(#622a0f, #613661, #ffffff);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .container {
+      padding: 50px;
+      text-align: center;
+      flex: auto;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: black;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1 style="text-align: center;">Kontak Kami</h1>
+  <nav style="text-align: center;">
+    <a href="Beranda.html">Home</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<div class="container" class="card">
+<h2 style="text-align: center;">Hubungi <span>Kami</span></h2>
+  <form action="https://formspree.io/f/mdapbenj" method="post" enctype="multipart/form-data">
+    <input type="text" name="nama" placeholder="Nama Lengkap Anda" required>
+    <input type="email" name="email" placeholder="Email Anda" required>
+    <textarea name="pesan" rows="5" placeholder="Pesan Anda"></textarea>
+    <button type="submit" class="btn">KIRIM PESAN</button>
+
+  </form>
+</div>
+
+<footer>
+  <p>© 2026 Nescafé</p>
+</footer>
+
+</body>
+</html>

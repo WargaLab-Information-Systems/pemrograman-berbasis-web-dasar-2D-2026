@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio — Mahasiswa</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --card: #161616;
+    --accent: #7c3aed;
+    --accent2: #a78bfa;
+    --text: #f0f0f0;
+    --muted: #666;
+    --border: rgba(255,255,255,0.07);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; }
+  h1,h2,h3 { font-family:'Syne',sans-serif; }
+
+  /* NAV */
+  nav {
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:1.1rem 3rem;
+    background:rgba(10,10,10,0.85);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-logo { font-family:'Syne',sans-serif; font-size:1.2rem; font-weight:800; letter-spacing:-0.02em; }
+  .nav-logo span { color:var(--accent2); }
+  .nav-links { display:flex; gap:2rem; list-style:none; }
+  .nav-links a { text-decoration:none; color:var(--muted); font-size:0.85rem; transition:color .2s; }
+  .nav-links a:hover { color:var(--text); }
+  .nav-dot { width:8px; height:8px; background:var(--accent); border-radius:50%; animation:pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  /* HERO */
+  .hero {
+    min-height:100vh;
+    display:flex; align-items:center;
+    padding:6rem 3rem 4rem;
+    position:relative; overflow:hidden;
+  }
+  .hero-bg-grid {
+    position:absolute; inset:0; z-index:0;
+    background-image:
+      linear-gradient(rgba(124,58,237,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124,58,237,0.04) 1px, transparent 1px);
+    background-size:60px 60px;
+  }
+  .hero-glow {
+    position:absolute; top:-20%; right:-10%;
+    width:600px; height:600px;
+    background:radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%);
+    z-index:0; pointer-events:none;
+  }
+  .hero-inner {
+    position:relative; z-index:1;
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:4rem; align-items:center; width:100%; max-width:1200px; margin:0 auto;
+  }
+  .hero-eyebrow {
+    display:inline-flex; align-items:center; gap:0.5rem;
+    font-size:0.75rem; letter-spacing:0.12em; color:var(--accent2);
+    text-transform:uppercase; font-weight:500; margin-bottom:1.25rem;
+  }
+  .hero-eyebrow-dot { width:6px; height:6px; background:var(--accent2); border-radius:50%; }
+  .hero h1 {
+    font-size:clamp(2.6rem,5vw,4rem);
+    font-weight:800; line-height:1.05;
+    letter-spacing:-0.04em; margin-bottom:1.25rem;
+  }
+  .hero h1 .name { color:var(--accent2); display:block; }
+  .hero-sub { font-size:1rem; line-height:1.75; color:var(--muted); margin-bottom:2rem; max-width:420px; }
+  .hero-tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:2rem; }
+  .tag {
+    font-size:0.75rem; padding:0.35rem 0.9rem;
+    border:1px solid var(--border); border-radius:999px;
+    color:var(--muted); letter-spacing:0.04em;
+    transition:all .2s;
+  }
+  .tag:hover { border-color:var(--accent2); color:var(--accent2); }
+  .hero-actions { display:flex; gap:1rem; flex-wrap:wrap; }
+  .btn-primary {
+    background:var(--accent); color:#fff;
+    padding:0.8rem 1.75rem; border-radius:6px;
+    font-size:0.875rem; font-weight:500; text-decoration:none;
+    transition:all .2s; font-family:'Syne',sans-serif;
+    letter-spacing:0.02em;
+  }
+  .btn-primary:hover { background:#6d28d9; }
+  .btn-ghost {
+    color:var(--text); padding:0.8rem 1.5rem;
+    border:1px solid var(--border); border-radius:6px;
+    font-size:0.875rem; text-decoration:none; transition:all .2s;
+  }
+  .btn-ghost:hover { border-color:rgba(255,255,255,0.25); }
+
+  /* Hero right: avatar area */
+  .hero-avatar-wrap { display:flex; flex-direction:column; align-items:center; gap:1.5rem; }
+  .avatar-ring {
+    width:220px; height:220px; border-radius:50%;
+    border:2px solid rgba(124,58,237,0.4);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .avatar-ring::before {
+    content:'';
+    position:absolute; width:240px; height:240px; border-radius:50%;
+    border:1px solid rgba(124,58,237,0.15);
+    animation:spin 20s linear infinite;
+  }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  .avatar-inner {
+    width:180px; height:180px; border-radius:50%;
+    background:linear-gradient(135deg,#1e1040,#2d1a6e);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Syne',sans-serif; font-size:3.5rem; font-weight:800;
+    color:var(--accent2); letter-spacing:-0.04em;
+  }
+  .hero-info-cards {
+    display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; width:100%;
+  }
+  .info-card {
+    background:var(--card); border:1px solid var(--border);
+    border-radius:10px; padding:1rem; text-align:center;
+  }
+  .info-card .val { font-family:'Syne',sans-serif; font-size:1.6rem; font-weight:800; color:var(--accent2); line-height:1; }
+  .info-card .lbl { font-size:0.7rem; color:var(--muted); margin-top:0.3rem; letter-spacing:0.04em; }
+
+  /* SKILLS */
+  .skills-section { padding:5rem 3rem; max-width:1200px; margin:0 auto; }
+  .sec-label {
+    font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase;
+    color:var(--accent2); font-weight:500; margin-bottom:0.75rem;
+    display:flex; align-items:center; gap:0.5rem;
+  }
+  .sec-label::before { content:''; width:20px; height:1px; background:var(--accent2); }
+  .sec-title {
+    font-size:clamp(1.8rem,3vw,2.4rem);
+    font-weight:800; letter-spacing:-0.03em;
+    margin-bottom:2.5rem; color:var(--text);
+  }
+  .skills-grid {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1rem;
+  }
+  .skill-group {
+    background:var(--card); border:1px solid var(--border);
+    border-radius:12px; padding:1.5rem;
+    transition:border-color .2s;
+  }
+  .skill-group:hover { border-color:rgba(124,58,237,0.3); }
+  .skill-group-title {
+    font-family:'Syne',sans-serif; font-size:0.85rem; font-weight:700;
+    color:var(--text); margin-bottom:1rem;
+    display:flex; align-items:center; gap:0.5rem;
+  }
+  .skill-group-title .dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+  .skill-pills { display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .skill-pill {
+    font-size:0.75rem; padding:0.3rem 0.75rem;
+    background:rgba(124,58,237,0.1); border:1px solid rgba(124,58,237,0.2);
+    border-radius:4px; color:var(--accent2); font-weight:500;
+  }
+  .skill-bar-row { margin-bottom:0.75rem; }
+  .skill-bar-label { display:flex; justify-content:space-between; font-size:0.78rem; color:var(--muted); margin-bottom:0.3rem; }
+  .skill-bar-track { height:4px; background:rgba(255,255,255,0.06); border-radius:2px; overflow:hidden; }
+  .skill-bar-fill { height:100%; border-radius:2px; background:var(--accent); transition:width 1s ease; }
+
+  /* PROJECTS */
+  .projects-section { padding:5rem 3rem; background:var(--surface); }
+  .projects-inner { max-width:1200px; margin:0 auto; }
+  .projects-grid {
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:1rem; margin-top:2.5rem;
+  }
+  .proj-card {
+    background:var(--card); border:1px solid var(--border);
+    border-radius:12px; padding:2rem; overflow:hidden;
+    position:relative; transition:all .25s; cursor:pointer;
+  }
+  .proj-card:hover { border-color:rgba(124,58,237,0.4); transform:translateY(-3px); }
+  .proj-card:nth-child(1) { grid-column:span 8; }
+  .proj-card:nth-child(2) { grid-column:span 4; }
+  .proj-card:nth-child(3) { grid-column:span 4; }
+  .proj-card:nth-child(4) { grid-column:span 8; }
+  .proj-num {
+    font-family:'Syne',sans-serif; font-size:4rem; font-weight:800;
+    color:rgba(124,58,237,0.07); position:absolute; top:1rem; right:1.5rem;
+    line-height:1; pointer-events:none; letter-spacing:-0.05em;
+  }
+  .proj-tags { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem; }
+  .proj-tag {
+    font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase;
+    padding:0.25rem 0.65rem; border-radius:3px;
+    background:rgba(124,58,237,0.15); color:var(--accent2); font-weight:500;
+  }
+  .proj-card h3 { font-size:1.1rem; font-weight:700; margin-bottom:0.6rem; color:var(--text); }
+  .proj-card p { font-size:0.85rem; line-height:1.7; color:var(--muted); }
+  .proj-footer {
+    margin-top:1.5rem; padding-top:1rem;
+    border-top:1px solid var(--border);
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .proj-stack { display:flex; gap:0.4rem; flex-wrap:wrap; }
+  .proj-tech { font-size:0.7rem; color:var(--muted); background:rgba(255,255,255,0.04); padding:0.2rem 0.5rem; border-radius:3px; }
+  .proj-link { font-size:0.75rem; color:var(--accent2); text-decoration:none; letter-spacing:0.04em; transition:opacity .2s; }
+  .proj-link:hover { opacity:0.7; }
+
+  /* EDUCATION */
+  .edu-section { padding:5rem 3rem; max-width:1200px; margin:0 auto; }
+  .edu-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:2.5rem; }
+  .edu-card {
+    background:var(--card); border:1px solid var(--border);
+    border-radius:12px; padding:1.75rem;
+    display:flex; gap:1.25rem; align-items:flex-start;
+    transition:border-color .2s;
+  }
+  .edu-card:hover { border-color:rgba(124,58,237,0.3); }
+  .edu-icon {
+    width:48px; height:48px; border-radius:10px;
+    background:rgba(124,58,237,0.15); flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .edu-icon svg { width:22px; height:22px; stroke:var(--accent2); fill:none; stroke-width:1.5; }
+  .edu-period { font-size:0.72rem; color:var(--accent2); font-weight:500; letter-spacing:0.06em; margin-bottom:0.3rem; }
+  .edu-school { font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:var(--text); margin-bottom:0.25rem; }
+  .edu-major { font-size:0.82rem; color:var(--muted); }
+  .edu-badge { margin-top:0.75rem; display:inline-block; font-size:0.7rem; padding:0.25rem 0.65rem; background:rgba(124,58,237,0.12); border:1px solid rgba(124,58,237,0.2); border-radius:4px; color:var(--accent2); }
+
+  /* CONTACT */
+  .contact-section { padding:5rem 3rem; background:var(--surface); }
+  .contact-inner { max-width:1200px; margin:0 auto; }
+  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; margin-top:2.5rem; }
+  .contact-info p { font-size:0.95rem; line-height:1.8; color:var(--muted); margin-bottom:2rem; }
+  .contact-links { display:flex; flex-direction:column; gap:0.75rem; }
+  .contact-link {
+    display:flex; align-items:center; gap:1rem;
+    background:var(--card); border:1px solid var(--border);
+    border-radius:8px; padding:0.9rem 1.25rem;
+    text-decoration:none; transition:border-color .2s;
+  }
+  .contact-link:hover { border-color:rgba(124,58,237,0.4); }
+  .contact-link-icon {
+    width:36px; height:36px; border-radius:7px;
+    background:rgba(124,58,237,0.12);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .contact-link-icon svg { width:16px; height:16px; stroke:var(--accent2); fill:none; stroke-width:2; }
+  .contact-link-text { font-size:0.82rem; color:var(--muted); }
+  .contact-link-val { font-size:0.9rem; font-weight:500; color:var(--text); }
+  .contact-form { display:flex; flex-direction:column; gap:1rem; }
+  .form-group { display:flex; flex-direction:column; gap:0.4rem; }
+  .form-group label { font-size:0.75rem; color:var(--muted); letter-spacing:0.05em; }
+  .form-group input, .form-group textarea {
+    background:var(--card); border:1px solid var(--border);
+    border-radius:8px; padding:0.75rem 1rem;
+    color:var(--text); font-family:'Inter',sans-serif; font-size:0.875rem;
+    outline:none; transition:border-color .2s; resize:none;
+  }
+  .form-group input:focus, .form-group textarea:focus { border-color:rgba(124,58,237,0.5); }
+  .form-group textarea { height:120px; }
+  .form-submit {
+    background:var(--accent); color:#fff; border:none;
+    padding:0.85rem; border-radius:8px; font-size:0.875rem;
+    font-weight:500; font-family:'Syne',sans-serif;
+    cursor:pointer; transition:background .2s; letter-spacing:0.03em;
+  }
+  .form-submit:hover { background:#6d28d9; }
+
+  /* FOOTER */
+  footer {
+    background:var(--bg); border-top:1px solid var(--border);
+    padding:2rem 3rem;
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:0.75rem;
+  }
+  footer p { font-size:0.8rem; color:var(--muted); }
+  .footer-back { font-size:0.8rem; color:var(--muted); text-decoration:none; transition:color .2s; }
+  .footer-back:hover { color:var(--text); }
+
+  /* FADE */
+  .fade-up { opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+  .fade-up.visible { opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">dev<span>.</span>porto</div>
+  <ul class="nav-links">
+    <li><a href="#about">Tentang</a></li>
+    <li><a href="#skills">Keahlian</a></li>
+    <li><a href="#projects">Proyek</a></li>
+    <li><a href="#education">Pendidikan</a></li>
+    <li><a href="#contact">Kontak</a></li>
+  </ul>
+  <div class="nav-dot"></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="fade-up">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        Mahasiswa Sistem Informasi · Aktif & Siap Berkolaborasi
+      </div>
+      <h1>
+        Halo, Saya
+        <span class="name">Akbar Imam Maulana</span>
+        Full-Stack Developer
+      </h1>
+      <p class="hero-sub">
+        Mahasiswa semester 2 yang antusias membangun aplikasi web dan mobile yang berdampak. Suka belajar hal baru, dan suka kopi Americano.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Laravel</span>
+        <span class="tag">React</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Tailwind CSS</span>
+        <span class="tag">PHP</span>
+        <span class="tag">JavaScript</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">Lihat Proyek</a>
+        <a href="#contact" class="btn-ghost">Hubungi Saya</a>
+      </div>
+    </div>
+
+    <div class="hero-avatar-wrap fade-up" style="transition-delay:.15s">
+      <div class="avatar-ring">
+        <div class="avatar-inner">NK</div>
+      </div>
+      <div class="hero-info-cards">
+        <div class="info-card">
+          <div class="val">2</div>
+          <div class="lbl">Semester Aktif</div>
+        </div>
+        <div class="info-card">
+          <div class="val">3.8</div>
+          <div class="lbl">IPK Saat Ini</div>
+        </div>
+        <div class="info-card">
+          <div class="val">6+</div>
+          <div class="lbl">Teknologi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="skills-section">
+    <div class="fade-up">
+      <div class="sec-label">Keahlian</div>
+      <h2 class="sec-title">Stack & Teknologi</h2>
+    </div>
+    <div class="skills-grid fade-up" style="transition-delay:.1s">
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <span class="dot" style="background:#7c3aed"></span> Frontend
+        </div>
+        <div class="skill-bar-row">
+          <div class="skill-bar-label"><span>HTML / CSS</span><span>90%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-bar-row">
+          <div class="skill-bar-label"><span>Tailwind CSS</span><span>85%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-bar-row">
+          <div class="skill-bar-label"><span>JavaScript</span><span>75%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-bar-row">
+          <div class="skill-bar-label"><span>React</span><span>60%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:60%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <span class="dot" style="background:#10b981"></span> Backend
+        </div>
+        <div class="skill-bar-row">
+          <div class="skill-bar-label"><span>PHP</span><span>80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:80%;background:#10b981"></div></div>
+        </div>
+        <div class="skill-bar-row">
+          <div class="skill-bar-label"><span>Laravel</span><span>78%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:78%;background:#10b981"></div></div>
+        </div>
+        <div class="skill-bar-row">
+          <div class="skill-bar-label"><span>Node.js</span><span>55%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:55%;background:#10b981"></div></div>
+        </div>
+        <div class="skill-bar-row">
+          <div class="skill-bar-label"><span>REST API</span><span>70%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:70%;background:#10b981"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <span class="dot" style="background:#f59e0b"></span> Database & Tools
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">MySQL</span>
+          <span class="skill-pill">PostgreSQL</span>
+          <span class="skill-pill">Git & GitHub</span>
+          <span class="skill-pill">Figma</span>
+          <span class="skill-pill">VS Code</span>
+          <span class="skill-pill">Postman</span>
+          <span class="skill-pill">Docker</span>
+          <span class="skill-pill">Linux</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects-section" id="projects">
+  <div class="projects-inner">
+    <div class="fade-up">
+      <div class="sec-label">Portofolio</div>
+      <h2 class="sec-title">Proyek yang Pernah Dibuat</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="proj-card fade-up">
+        <div class="proj-num">01</div>
+        <div class="proj-tags">
+          <span class="proj-tag">Web App</span>
+          <span class="proj-tag">Full Stack</span>
+        </div>
+        <h3>Sistem Manajemen Inventaris Gudang</h3>
+        <p>Aplikasi web untuk mengelola stok barang, arus masuk/keluar, dan laporan kualitas kontrol secara real-time. Dibangun sebagai tugas praktikum basis data.</p>
+        <div class="proj-footer">
+          <div class="proj-stack">
+            <span class="proj-tech">Laravel</span>
+            <span class="proj-tech">MySQL</span>
+            <span class="proj-tech">Tailwind</span>
+            <span class="proj-tech">Blade</span>
+          </div>
+          <a href="#" class="proj-link">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="proj-card fade-up" style="transition-delay:.1s">
+        <div class="proj-num">02</div>
+        <div class="proj-tags">
+          <span class="proj-tag">Mobile</span>
+        </div>
+        <h3>Aplikasi To-Do Harian</h3>
+        <p>App manajemen tugas dengan reminder dan kategori prioritas.</p>
+        <div class="proj-footer">
+          <div class="proj-stack">
+            <span class="proj-tech">React Native</span>
+            <span class="proj-tech">SQLite</span>
+          </div>
+          <a href="#" class="proj-link">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="proj-card fade-up" style="transition-delay:.15s">
+        <div class="proj-num">03</div>
+        <div class="proj-tags">
+          <span class="proj-tag">Frontend</span>
+        </div>
+        <h3>Landing Page Company Profile</h3>
+        <p>Website company profile modern dengan animasi dan layout grid responsif.</p>
+        <div class="proj-footer">
+          <div class="proj-stack">
+            <span class="proj-tech">HTML</span>
+            <span class="proj-tech">Tailwind</span>
+            <span class="proj-tech">JS</span>
+          </div>
+          <a href="#" class="proj-link">Live →</a>
+        </div>
+      </div>
+
+      <div class="proj-card fade-up" style="transition-delay:.2s">
+        <div class="proj-num">04</div>
+        <div class="proj-tags">
+          <span class="proj-tag">API</span>
+          <span class="proj-tag">Backend</span>
+        </div>
+        <h3>REST API Sistem Akademik Mahasiswa</h3>
+        <p>Backend API untuk mengelola data mahasiswa, mata kuliah, jadwal, dan nilai akademik dengan autentikasi JWT. Digunakan sebagai backend aplikasi mobile kampus.</p>
+        <div class="proj-footer">
+          <div class="proj-stack">
+            <span class="proj-tech">Laravel</span>
+            <span class="proj-tech">JWT Auth</span>
+            <span class="proj-tech">PostgreSQL</span>
+            <span class="proj-tech">Postman</span>
+          </div>
+          <a href="#" class="proj-link">GitHub →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="edu-section">
+    <div class="fade-up">
+      <div class="sec-label">Pendidikan</div>
+      <h2 class="sec-title">Latar Belakang Akademik</h2>
+    </div>
+    <div class="edu-grid fade-up" style="transition-delay:.1s">
+      <div class="edu-card">
+        <div class="edu-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div>
+          <div class="edu-period">2025 — Sekarang</div>
+          <div class="edu-school">Universitas Trunojoyo Madura</div>
+          <div class="edu-major">S1 Sistem Informasi</div>
+          <div class="edu-badge">IPK 3.80 / 4.00</div>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div>
+          <div class="edu-period">2021 — 2025</div>
+          <div class="edu-school">SMA Negeri 1 Balongpanggang</div>
+          <div class="edu-major">Jurusan IPA / MIPA</div>
+          <div class="edu-badge">Lulus dengan Predikat Baik</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="fade-up">
+      <div class="sec-label">Kontak</div>
+      <h2 class="sec-title">Mari Berkolaborasi</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="fade-up">
+        <p>Saya terbuka untuk project freelance, magang, kolaborasi tugas, atau sekadar ngobrol tentang teknologi. Jangan ragu untuk menghubungi!</p>
+        <div class="contact-links">
+          <a href="mailto:akbarimammaulana@email.com" class="contact-link">
+            <div class="contact-link-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-link-text">Email</div>
+              <div class="contact-link-val">akbarimammaulana@email.com</div>
+            </div>
+          </a>
+          <a href="#" class="contact-link">
+            <div class="contact-link-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </div>
+            <div>
+              <div class="contact-link-text">GitHub</div>
+              <div class="contact-link-val">akbarimammaulana-ship-it</div>
+            </div>
+          </a>
+          <a href="#" class="contact-link">
+            <div class="contact-link-icon">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <div class="contact-link-text">LinkedIn</div>
+              <div class="contact-link-val">Akbar Imam Maulana</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form fade-up" style="transition-delay:.15s">
+        <form action="https://formspree.io/f/mdapbenj" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label>Nama Lengkap</label>
+            <input type="text" placeholder="Nama kamu..." name="nama">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="email@contoh.com" name="email" >
+          </div>
+          <div class="form-group">
+            <label>Pesan</label>
+            <textarea placeholder="Halo, saya ingin berkolaborasi tentang..." name="pesan"></textarea>
+          </div>
+          <button class="form-submit" onclick="this.textContent='Terkirim!';setTimeout(()=>this.textContent='Kirim Pesan',2000)">Kirim Pesan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2024 Nama Kamu · Dibuat dengan semangat belajar</p>
+  <a href="#home" class="footer-back">Kembali ke Atas ↑</a>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
