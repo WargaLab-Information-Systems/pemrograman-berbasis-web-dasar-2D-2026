@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+
+  <title>EduCourse</title>
+</head>
+
+<body class="bg-white dark:bg-[#0F172A] text-black dark:text-gray-200 transition duration-300">
+
+  <!-- TOGGLE -->
+  <button onclick="toggleDark()"
+    class="fixed bottom-5 right-5 bg-black text-white px-4 py-2 rounded-lg dark:bg-white dark:text-black z-50">
+    Toggle
+  </button>
+
+  <nav class="flex justify-between items-center px-14 py-4 bg-white dark:bg-[#1E293B] shadow-md w-full">
+    <div class="flex gap-4 text-sm font-bold">
+      <a href="">HOME</a>
+      <a href="">COURSES</a>
+      <a href="">THEACHERS</a>
+      <a href="">PAGES</a>
+      <a href="">BLOG</a>
+      <a href="">CONTACT</a>
+    </div>
+    <button class="bg-[#3852B4] text-white font-bold px-4 py-1 rounded-lg text-sm flex items-center gap-2">
+      <svg width="15" height="24" viewBox="0 0 24 24">
+        <path d="M16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20L10.575 18.6L16.175 13Z" fill="white" />
+      </svg>
+      CONTACT US
+    </button>
+  </nav>
+
+  <section id="hero"
+    class="bg-blue-50 dark:bg-[#0F172A] px-10 py-16 grid md:grid-cols-2 items-center h-screen transition">
+    <div>
+      <p class="text-[#3852B4] dark:text-indigo-400 text-xs font-bold mb-2">E-LEARNING PLATFORM</p>
+      <h2 class="text-4xl font-bold text-[#3852B4] dark:text-white leading-tight">
+        Online Course Education
+      </h2>
+      <p class="text-2xl font-semibold dark:text-gray-300">Feels Like Real Classroom</p>
+
+      <div class="flex items-center gap-5 my-5">
+        <p class="flex gap-2 dark:text-gray-300"><img src="UTS/icon_checklist.svg">Get sertificate</p>
+        <p class="flex gap-2 dark:text-gray-300"><img src="UTS/icon_checklist.svg">Get Gain JOB Ready Skill</p>
+        <p class="flex gap-2 dark:text-gray-300"><img src="UTS/icon_checklist.svg">Greay Life</p>
+      </div>
+
+      <div class="flex gap-4">
+        <button
+          class="flex justify-center items-center gap-2 font-bold bg-[#3852B4] text-white px-3 py-2 rounded hover:opacity-90">
+          GET STARTED
+        </button>
+        <button
+          class="flex justify-center items-center gap-2 font-bold bg-[#F08D39] text-white px-3 py-2 rounded hover:opacity-90">
+          GET COURSE
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <img src="UTS/gambar_orang.png" class="mx-auto" />
+    </div>
+  </section>
+
+  <section id="about"
+    class="bg-[#5E7AC4] dark:bg-[#1E293B] px-10 py-16 grid md:grid-cols-2 items-center h-screen transition">
+    <div>
+      <img src="UTS/gambar_course.png" class="mx-auto w-[500px]" />
+    </div>
+    <div>
+      <p class="text-white text-md font-semibold mb-2">GET TO KNOW ABOUT US</p>
+      <h2 class="text-4xl font-bold text-white leading-tight mb-4">
+        Transform your future with skills that matter. Start learning today, lead tomorrow.
+      </h2>
+      <p class="text-white mb-4">Can helping you build in-demand skills quickly and advance career.</p>
+
+      <button
+        class="flex justify-center items-center gap-2 font-bold bg-[#F08D39] text-white px-3 py-2 rounded hover:opacity-90">
+        About More
+      </button>
+    </div>
+  </section>
+
+  <section id="Features" class="bg-blue-50 dark:bg-[#0F172A] transition">
+    <div class="py-10 flex justify-center gap-10 text-sm text-[#3852B4] dark:text-indigo-400">
+      <p class="flex items-center gap-2 font-semibold text-xs"><img src="UTS/icon_folder.svg">20k+ Online Course</p>
+      <p class="flex items-center gap-2 font-semibold text-xs"><img src="UTS/icon_jam.svg">Lifetime Access</p>
+      <p class="flex items-center gap-2 font-semibold text-xs"><img src="UTS/icon_uang.svg">Value for Money</p>
+      <p class="flex items-center gap-2 font-semibold text-xs"><img src="UTS/icon_headphone.svg">Lifetime Support</p>
+      <p class="flex items-center gap-2 font-semibold text-xs"><img src="UTS/people_icon.svg">Community Support</p>
+      <p class="flex items-center gap-2 font-semibold text-xs"><img src="UTS/icon_download.svg">Free Download</p>
+    </div>
+
+    <h3 class="text-center text-2xl font-bold mb-10 dark:text-white">OUR POPULAR COURSE</h3>
+
+    <div class="grid md:grid-cols-4 gap-4 mx-[100px]">
+      <div class="bg-white dark:bg-[#1E293B] p-2 rounded-lg shadow-lg flex gap-2">
+        <img src="UTS/icon_toa.svg" class="w-[40px]">
+        <div>
+          <p class="font-bold dark:text-white">Digital Marketing</p>
+          <p class="text-xs dark:text-gray-400">354 Course</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-[#1E293B] p-2 rounded-lg shadow-lg flex gap-2">
+        <img src="UTS/icon_pallet.svg" class="w-[40px]">
+        <div>
+          <p class="font-bold dark:text-white">Graphic Design</p>
+          <p class="text-xs dark:text-gray-400">553 Course</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-[#1E293B] p-2 rounded-lg shadow-lg flex gap-2">
+        <img src="UTS/icon_hp.svg" class="w-[40px]">
+        <div>
+          <p class="font-bold dark:text-white">UI/UX Design</p>
+          <p class="text-xs dark:text-gray-400">175 Course</p>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-[#1E293B] p-2 rounded-lg shadow-lg flex gap-2">
+        <img src="UTS/icon_webpage.svg" class="w-[40px]">
+        <div>
+          <p class="font-bold dark:text-white">Web Development</p>
+          <p class="text-xs dark:text-gray-400">211 Course</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- cards -->
+    <div class="grid md:grid-cols-4 gap-6 py-10 mx-[100px]">
+      <div class="bg-white dark:bg-[#1E293B] rounded-xl shadow p-2">
+        <img src="UTS/thumbnail-1.png" class="mb-2" />
+        <h4 class="font-semibold dark:text-white">Learn Figma</h4>
+      </div>
+
+      <div class="bg-white dark:bg-[#1E293B] rounded-xl shadow p-2">
+        <img src="UTS/thumbnail-2.png" class="mb-2" />
+        <h4 class="font-semibold dark:text-white">Python Fundamental</h4>
+      </div>
+
+      <div class="bg-white dark:bg-[#1E293B] rounded-xl shadow p-2">
+        <img src="UTS/thumbnail-3.png" class="mb-2" />
+        <h4 class="font-semibold dark:text-white">Digital Marketing</h4>
+      </div>
+
+      <div class="bg-white dark:bg-[#1E293B] rounded-xl shadow p-2">
+        <img src="UTS/thumbnail-4.png" class="mb-2" />
+        <h4 class="font-semibold dark:text-white">Graphic Design</h4>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="bg-[#5E7AC4] dark:bg-[#1E293B] text-white">
+    <div class="flex justify-between mx-[100px] p-10">
+      <div>
+        <h4 class="font-semibold mb-2 text-2xl max-w-[400px]">Dive Into our Online Courses and Ignite Your Learning</h4>
+      </div>
+      <div class="flex justify-center gap-24">
+        <div>
+          <h4 class="font-bold">About Me</h4>
+          <ul class="text-sm">
+            <li>Short Profile</li>
+            <li>Online Courses</li>
+            <li>Monthly Discount</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold">Navigation</h4>
+          <ul class="text-sm">
+            <li>Home</li>
+            <li>Teachers</li>
+            <li>Pages</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold">More Information</h4>
+          <ul class="text-sm">
+            <li>Privacy and Terms</li>
+            <li>Copyright</li>
+            <li>Accessibility</li>
+            <li>Sitemap</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#3852B4] dark:bg-[#0F172A] text-center p-5">
+      <p class="text-center text-sm p-5">@2026 Online Course. All right reserved. Designed By Dhani Kusuma Prasetyo</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleDark() {
+      document.documentElement.classList.toggle('dark')
+    }
+  </script>
+
+</body>
+
+</html>
