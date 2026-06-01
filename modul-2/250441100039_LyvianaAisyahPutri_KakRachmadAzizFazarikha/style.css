@@ -1,0 +1,130 @@
+/* =========================================
+   EKSTERNAL CSS - SUDUT REBAH COFFEE
+   ========================================= */
+body {
+    background-color: #FDF8F5; /* Warna dasar krem / busa susu */
+    font-family: 'Georgia', serif; 
+    margin: 0;
+    padding: 0;
+    color: #3E2723; /* Teks warna cokelat espresso */
+}
+
+.wadah-utama {
+    width: 85%;
+    margin: auto;
+}
+
+/* NAVBAR STICKY */
+.navbar {
+    background-color: #D7CCC8; 
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid #795548; 
+    text-align: center;
+}
+
+.navbar a {
+    color: #3E2723;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #FDF8F5;
+    border-radius: 20px;
+}
+
+.navbar a:hover {
+    background-color: #5D4037;
+    color: white;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: linear-gradient(to right, #D7CCC8, #EFEBE9);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px dashed #795548;
+    margin-bottom: 30px;
+}
+
+/* AREA PRODUK (LAYOUT AUTO RAPI) */
+.area-produk {
+    text-align: center; 
+}
+
+.kartu-menu {
+    display: inline-block; /* Berjajar otomatis ke samping */
+    vertical-align: top; /* Rata atas jika teks panjangnya beda */
+    width: 28%; 
+    margin: 1.5%; 
+    background-color: white;
+    border: 2px solid #D7CCC8;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* PENGUNCI GAMBAR AGAR SERAGAM */
+.gambar-minuman {
+    width: 100%; 
+    height: 200px; /* Kunci tinggi gambar di 200px */
+    object-fit: cover; /* Potong otomatis agar tidak gepeng */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 2px solid #D7CCC8;
+}
+
+/* TOMBOL DELIVERY */
+.tombol-pesan {
+    display: inline-block;
+    background-color: #795548; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.tombol-pesan:hover {
+    background-color: #3E2723;
+}
+
+/* TABEL INFO OFFLINE */
+.tabel-offline {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.tabel-offline th {
+    background-color: #D7CCC8;
+    color: #3E2723;
+    padding: 15px;
+}
+
+.tabel-offline td {
+    padding: 12px;
+    border: 1px solid #EFEBE9;
+}
+
+/* FORM PESANAN ACARA */
+.form-katering {
+    background-color: white;
+    padding: 30px;
+    border: 3px double #795548;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.input-form {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
