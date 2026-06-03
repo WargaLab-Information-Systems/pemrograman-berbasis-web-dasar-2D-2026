@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+
+      .dark-mode nav {
+        background-color: #101722 !important;
+      }
+
+      .dark-mode section {
+        background-color: black !important;
+        color: white !important;
+      }
+
+      .dark-mode footer {
+        background-color: #f4cc73 !important;
+        color: inherit !important;
+      }
+
+      .dark-mode .bg-white {
+        background-color: #101722 !important;
+        color: white !important;
+      }
+
+      .dark-mode p,
+      .dark-mode li,
+      .dark-mode h1,
+      .dark-mode h2,
+      .dark-mode h3 {
+        color: white !important;
+      }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+<nav class="flex justify-between items-center p-6 bg-white shadow">
+  <div class="flex items-center gap-2">
+    <img src="Logo.png" class="w-8">
+    <h1 class="font-bold text-[#8A38F5]">BzMe</h1>
+  </div>
+
+  <ul class="hidden md:flex gap-6 text-gray-600">
+    <li><a href="#home" class="text-[#FFD47E]">Home</a></li>
+    <li><a href="#about" class="text-[#8A38F5]">About</a></li>
+    <li><a href="#services" class="text-[#8A38F5]">Contact</a></li>
+    <li><a href="#blog" class="text-[#8A38F5]">Blog</a></li>
+  </ul>
+
+  <div class="flex gap-3">
+  <button
+            id="tombolTema"
+            class="bg-gray-200 px-5 py-2 rounded-md text-sm font-semibold hover:bg-gray-300 transition"
+          >
+            Dark Mode
+          </button>
+ <button class="bg-[#FF9335] text-white px-5 py-2 rounded-lg transition">
+      Sign Up
+    </button>
+  </div>
+</nav>
+
+<section id="home" class="grid md:grid-cols-2 gap-10 items-center pt-28 pb-16">
+  <div class="items-center px-6">
+    <h1 class="text-4xl font-bold mb-4">
+      We Create <br>
+      <span class="mt-4 text-[#8A38F5]">Solutions</span> For
+    </h1>
+    <h1 class="text-4xl font-bold mb-4">
+     Your Business
+    </h1>
+    <p class="text-gray-500 mb-6">
+      We provide intelligent technology solutions to 
+      optimize efficiency and accelerate the growth of 
+      your business operations.
+    </p>
+    <button class="bg-[#FF9335] text-white px-5 py-3 rounded">
+      Get Started
+    </button>
+  </div>
+
+  <div class="flex justify-center">
+    <img src="1.png" class="w-[400px]">
+  </div>
+</section>
+
+<section class="py-20 px-6">
+  <div class="text-center max-w-3xl mx-auto">
+    <h1 class="text-4xl font-bold text-gray-900">
+      We Provide The Best 
+      <span class="text-purple-600">Services</span>
+    </h1>
+    <p class="text-gray-500 mt-4">
+      We deliver high-quality technology services specifically designed to enhance 
+      your business productivity and scalability in a sustainable way.</p>
+  </div>
+
+  <div class="grid md:grid-cols-4 gap-8 mt-14 max-w-7xl mx-auto">
+    <div class="bg-white rounded-xl shadow-lg p-6 border hover:shadow-xl transition">
+      <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-4">
+      <img src="icon 1.png">
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Seo/sem</h3>
+      <p class="text-gray-500 text-sm mb-6">Lorem ipsum dolor sit amet consectetur adipiscing elit.Dolor sit amet consectetur adipiscing elit quisque faucibus.</p>
+      <button class="bg-purple-500 text-white px-5 py-2 rounded-lg shadow">
+        Click Here
+      </button>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-6 border hover:shadow-xl transition">
+      <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-4">
+      <img src="icon 1.png">
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Viral Campaign</h3>
+      <p class="text-gray-500 text-sm mb-6">Lorem ipsum dolor sit amet consectetur adipiscing elit.Dolor sit amet consectetur adipiscing elit quisque faucibus.</p>
+      <button class="bg-purple-500 text-white px-5 py-2 rounded-lg shadow">
+        Click Here
+      </button>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-6 border hover:shadow-xl transition">
+      <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-4">
+      <img src="icon 2.png">
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Marketing</h3>
+      <p class="text-gray-500 text-sm mb-6">Lorem ipsum dolor sit amet consectetur adipiscing elit.Dolor sit amet consectetur adipiscing elit quisque faucibus.</p>
+      <button class="bg-purple-500 text-white px-5 py-2 rounded-lg shadow">
+        Click Here
+      </button>
+    </div>
+
+ <div class="bg-white rounded-xl shadow-lg p-6 border hover:shadow-xl transition">
+      <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-4">
+      <img src="icon 3.png">
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Others</h3>
+      <p class="text-gray-500 text-sm mb-6">Lorem ipsum dolor sit amet consectetur adipiscing elit.Dolor sit amet consectetur adipiscing elit quisque faucibus.</p>
+      <button class="bg-purple-500 text-white px-5 py-2 rounded-lg shadow">
+        Click Here
+      </button>
+    </div>
+ </div>
+</section>
+
+<section id="about" class="grid md:grid-cols-2 gap-10 p-10 items-center bg-[#FFD47E]">
+  <img src="2.png" class="w-[420px]">
+  <div>
+    <h2 class="text-2xl font-bold mb-4">Simple Solutions!</h2>
+    <p class="mb-4">
+      We understand that no two are alike. That's why we take the time to truly understand your unique goals, challenges, and vision.</p>
+    <button class="bg-[#FF9335] text-white px-4 py-2 rounded mr-2">
+      Get Started
+    </button>
+    <button class="border border-[#8a38f5] border-2 text-[#8a38f5] font-semibold px-4 py-2 rounded">
+      Read More
+    </button>
+  </div>
+</section>
+
+<section id="blog" class="p-16 bg-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10 px-6">
+            <div>
+                <h2 class="text-3xl font-bold">
+                    Our <span class="text-[#8A38F5]">Agency</span>
+                </h2>
+                <p class="mt-4 font-gray-700">
+                    We believe in the power of data. Our analytics-driven approach allows us to make informed
+                    Let's turn your data into actionable insights adored Solutions for Your Business
+                </p>
+                <button class="mt-6 bg-[#FF9335] text-white px-6 py-2 rounded-lg">
+                    Read Mode
+                </button>
+            </div>
+            <div class="flex justify-center">
+                <img src="3.png" class="w-[420px]">
+            </div>
+        </div>
+    </section>
+
+<section class="py-16 bg-white text-center">
+        <h2 class="text-3xl font-bold">
+            What <span class="text-[#FF9335]">Clients</span> Say!
+        </h2>
+        <p class="text-gray-500 mt-2">
+            See How Our Digital Marketing Agency Helped Clients Achieve Their Goals</p>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 mt-12 px-6">
+            <div class="bg-white p-6 rounded-2xl text-left shadow-[0_0_20px_rgba(0,0,0,0.2)] hover:scale-105">
+                <h3 class="font-bold text-[#FF9335] text-lg">Johnny Suh</h3>
+                <p class="text-sm font-semibold text-gray-500">Executive CEO</p>
+                <p class="mt-3 text-sm text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus urna, vehicula sed purus ut.
+                </p>
+                <div class="flex mt-3">
+                    <img src="Star 2.png" class="w-4">
+                    <img src="Star 2.png" class="w-4">
+                    <img src="Star 2.png" class="w-4">
+                    <img src="Star 1.png" class="w-4">
+                    <img src="Star 1.png" class="w-4">
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.2)] text-left hover:scale-105">
+                <h3 class="font-bold text-[#FF9335] text-lg">Nashley Juan</h3>
+                <p class="text-sm font-semibold text-gray-500">Executive CEO</p>
+                <p class="mt-3 text-sm text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus urna, vehicula sed purus ut.
+                </p>
+                <div class="flex mt-3">
+                    <img src="Star 2.png" class="w-4">
+                    <img src="Star 2.png" class="w-4">
+                    <img src="Star 2.png" class="w-4">
+                    <img src="Star 2.png" class="w-4">
+                    <img src="Star 1.png" class="w-4">
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.2)] text-left hover:scale-105">
+                <h3 class="font-bold text-[#FF9335] text-lg">Mark Z.</h3>
+                <p class="text-sm font-semibold text-gray-500">Executive CEO</p>
+                <p class="mt-3 text-sm text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus urna, vehicula sed purus ut.
+                </p>
+                <div class="flex mt-3">
+                    <img src="Star 2.png" class="w-4">
+                    <img src="Star 2.png" class="w-4">
+                    <img src="Star 2.png" class="w-4">
+                    <img src="Star 2.png" class="w-4">
+                    <img src="Star 2.png" class="w-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="contact" class="bg-[#FFD47E] pt-20 pb-9 relative">
+        <div class="max-w-6xl mx-auto px-6 absolute left-1/2 -translate-x-1/2 -top-10 w-full">
+            <div class="bg-[#FF9335] rounded-2xl px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg">
+                <h2 class="text-white text-lg md:text-xl font-semibold">
+                    Ready To Get Started?
+                </h2>
+                <button class="border-2 border-white text-white px-6 py-2 rounded-xl">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 mt-10 grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-3">
+                    <img src="Logo.png" class="w-12">
+                    <h2 class="font-bold text-lg text-[#8A38F5]">BzMe</h2>
+                </div>
+            </div>
+            <div>
+                <h3 class="font-semibold mb-2">Company</h3>
+                <ul class="space-y-1 text-sm">
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Careers</li>
+                    <li>Team</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold mb-2">Design</h3>
+                <ul class="space-y-1 text-sm">
+                    <li>Find a Designer</li>
+                    <li>Discover Inspiration</li>
+                    <li>Pricing</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold mb-2">Support</h3>
+                <ul class="space-y-1 text-sm">
+                    <li>Privacy Policy</li>
+                    <li>Terms</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+      document
+        .getElementById("tombolTema")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("dark-mode");
+        });
+    </script>
+</body>
+</html>
