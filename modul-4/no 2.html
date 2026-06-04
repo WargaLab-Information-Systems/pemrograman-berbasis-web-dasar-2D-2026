@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="id" class="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homepage Tailwind</title>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+  darkMode: 'class'
+}
+</script>
+
+</head>
+
+<body class="transition duration-300">
+
+
+<nav class="bg-white dark:bg-gray-900 shadow py-4">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6">
+
+    <ul class="flex gap-6 font-bold">
+        <li><a href="#HOME" class="text-blue-600 hover:text-blue-800 transition">HOME</a></li>
+        <li><a href="#COURSES" class="dark:text-white hover:text-blue-500 transition">COURSES</a></li>
+        <li><a href="#TEACHERS" class="dark:text-white hover:text-blue-500 transition">TEACHERS</a></li>
+        <li><a href="#CONTACT" class="dark:text-white hover:text-blue-500 transition">CONTACT</a></li>
+    </ul>
+
+    <div class="flex gap-3">
+      <button class="bg-blue-600 text-white px-4 py-2 rounded-lg">
+        CONTACT US
+      </button>
+
+      <button id="toggleTheme"
+        class="border px-3 py-2 rounded dark:text-white">
+        Dark Mode
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+
+<section id="HOME" class="bg-gray-100 dark:bg-gray-800 min-h-screen flex items-center">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-10">
+
+
+    <div>
+      <p class="text-sm uppercase mb-3 dark:text-gray-300">
+        E-LEARNING PLATFORM
+      </p>
+
+      <h1 class="text-4xl font-bold mb-4 dark:text-white">
+        Online Course Education
+      </h1>
+
+      <h2 class="text-xl mb-6 dark:text-gray-300">
+        Feels like real classroom. Learn from anywhere and grow your skills.
+      </h2>
+    <div class="flex flex-wrap gap-6 mb-8">
+        <div class="flex items-center gap-2">
+            <span class="w-5 h-5 flex items-center justify-center bg-blue-600 text-white rounded-full text-xs">✓</span>
+            <span class="text-gray-800 dark:text-gray-200">Get Certificate</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <span class="w-5 h-5 flex items-center justify-center bg-blue-600 text-white rounded-full text-xs">✓</span>
+            <span class="text-gray-800 dark:text-gray-200">Gain Job Ready Skill</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <span class="w-5 h-5 flex items-center justify-center bg-blue-600 text-white rounded-full text-xs">✓</span>
+            <span class="text-gray-800 dark:text-gray-200">Greay Life</span>
+    </div>
+
+    </div>
+      <div class="flex gap-4">
+        <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-xl">
+            Get Started →
+        </a>
+
+        <a href="#" class="bg-yellow-400 text-black px-6 py-3 rounded-xl">
+            Get Course →
+        </a>
+</div>
+    </div>
+
+    <div class="text-center">
+      <img src="gambar gambar/gambar_orang.png"
+           class="max-w-[400px] mx-auto">
+    </div>
+
+  </div>
+</section>
+
+<section id="COURSES" class="bg-[#5f77b5] py-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-10">
+
+    <div class="relative h-[320px] flex items-center justify-center">
+
+        <img src="gambar gambar/gambar_course.png" class="w-[350px] md:w-[420px] rounded-2xl shadow-xl">
+
+    </div>
+    
+    <div class="text-white">
+      <p class="uppercase text-sm mb-3">Get To Know About Us</p>
+
+      <h2 class="text-3xl font-bold mb-4">
+        Transform your future with skills that matter.
+        Start learning today, lead tomorrow.
+      </h2>
+
+      <p class="mb-6 text-gray-200">
+        Can helping you build in-demand skills quickly and advance your career.
+      </p>
+
+      <button class="bg-yellow-400 text-black px-5 py-2 rounded-lg">
+        About More →
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section id="TEACHERS" class="bg-[#e8eefb] py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-6 mb-20 text-blue-700 text-xs font-semibold">
+        <div class="flex items-center gap-2">
+            <img src="gambar gambar/folder.svg" class="w-6 h-6">
+            <span>20k+ Online Course</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <img src="gambar gambar/jam.svg" class="w-6 h-6">
+            <span>Lifetime Access</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <img src="gambar gambar/uang.svg" class="w-6 h-6">
+            <span>Value For Money</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <img src="gambar gambar/heatset.svg" class="w-6 h-6">
+            <span>Lifetime Support</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <img src="gambar gambar/people.svg" class="w-6 h-6">
+            <span>Community Support</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <img src="gambar gambar/download.svg" class="w-6 h-6">
+            <span>Free Download Course</span>
+        </div>
+    </div>
+
+
+    <h2 class="text-center text-3xl md:text-4xl font-extrabold text-gray-800 mb-12">
+      OUR POPULAR COURSE
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+
+      <div class="bg-white rounded-xl shadow p-5 flex items-center gap-4">
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+        <img src="gambar gambar/digital_marketing.svg" class="w-6 h-6">
+      </div>
+      <div>
+        <h3 class="font-bold">Digital Marketing</h3>
+        <p class="text-sm text-gray-500">354 Courses</p>
+      </div>
+
+    </div>
+
+      <div class="bg-white rounded-xl shadow p-5 flex items-center gap-4">
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <img src="gambar gambar/pallet.svg" class="w-6 h-6">
+        </div>
+        <div>
+          <h3 class="font-bold">Graphic Design</h3>
+          <p class="text-sm text-gray-500">553 Courses</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-5 flex items-center gap-4">
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <img src="gambar gambar/hp.svg" class="w-6 h-6">
+        </div>
+        <div>
+          <h3 class="font-bold">UI/UX Design</h3>
+          <p class="text-sm text-gray-500">175 Courses</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-5 flex items-center gap-4">
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <img src="gambar gambar/web.svg" class="w-6 h-6">
+        </div>
+        <div>
+          <h3 class="font-bold">Web Development</h3>
+          <p class="text-sm text-gray-500">211 Courses</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="bg-white rounded-xl shadow p-3">
+        <img src="gambar gambar/course1.png" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-bold mb-2">Learn Figma - UI/UX Design Fundamental</h3>
+        <div class="flex items-center gap-2 mb-3">
+            <img src="gambar gambar/profil.svg" class="w-6 h-6 rounded-full object-cover">
+            <span class="text-xs text-gray-600">
+                Programer_Handal
+            </span>
+        </div>
+        <div class="flex justify-between text-xs">
+            <div class="flex items-center gap-2">
+    `       <div class="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center">
+                <img src="gambar gambar/folder.svg" class="w-4 h-4">
+            </div>
+                <span>20 Files</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center">
+                <img src="gambar gambar/jam.svg" class="w-4 h-4">
+            </div>
+                <span>5 Hours</span>
+            </div>
+            <span class="bg-red-500 text-white px-2 rounded">FREE</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-3">
+        <img src="gambar gambar/course2.png" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-bold mb-2">Python Fundamental - For Algoritma Pemograman</h3>
+        <div class="flex items-center gap-2 mb-3">
+            <img src="gambar gambar/profil.svg" class="w-6 h-6 rounded-full object-cover">
+            <span class="text-xs text-gray-600">
+                Programer_Handal
+            </span>
+        </div>
+        <div class="flex justify-between text-xs">
+            <div class="flex items-center gap-2">
+    `       <div class="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center">
+                <img src="gambar gambar/folder.svg" class="w-4 h-4">
+            </div>
+                <span>20 Files</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center">
+                <img src="gambar gambar/jam.svg" class="w-4 h-4">
+            </div>
+                <span>5 Hours</span>
+            </div>
+            <span class="bg-red-500 text-white px-2 rounded">FREE</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-3">
+        <img src="gambar gambar/course3.png" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-bold mb-2">Visual Hook - Digital Marketing Course Eps. 3</h3>
+        <div class="flex items-center gap-2 mb-3">
+            <img src="gambar gambar/profil.svg" class="w-6 h-6 rounded-full object-cover">
+            <span class="text-xs text-gray-600">
+                Programer_Handal
+            </span>
+        </div>
+        <div class="flex justify-between text-xs">
+            <div class="flex items-center gap-2">
+    `       <div class="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center">
+                <img src="gambar gambar/folder.svg" class="w-4 h-4">
+            </div>
+                <span>20 Files</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center">
+                <img src="gambar gambar/jam.svg" class="w-4 h-4">
+            </div>
+                <span>5 Hours</span>
+            </div>
+            <span class="bg-red-500 text-white px-2 rounded">FREE</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-3">
+        <img src="gambar gambar/course4.png" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-bold mb-2">
+            Layout - Graphic Design Beginner</h3>
+        <div class="flex items-center gap-2 mb-3">
+            <img src="gambar gambar/profil.svg" class="w-6 h-6 rounded-full object-cover">
+            <span class="text-xs text-gray-600">
+                Programer_Handal
+            </span>
+        </div>
+        <div class="flex justify-between text-xs">
+          <div class="flex items-center gap-2">
+    `       <div class="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center">
+                <img src="gambar gambar/folder.svg" class="w-4 h-4">
+            </div>
+                <span>20 Files</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center">
+                <img src="gambar gambar/jam.svg" class="w-4 h-4">
+            </div>
+                <span>5 Hours</span>
+            </div>
+            <span class="bg-red-500 text-white px-2 rounded">FREE</span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="text-center mt-12">
+      <a href="#" class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-bold transition">
+        View All Course →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer id="CONTACT" class="bg-[#5f79bf] text-white">
+
+  <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <div>
+      <h2 class="text-lg md:text-xl font-semibold leading-snug">
+        Dive Into our Online Courses <br>
+        and Ignite Your Learning
+      </h2>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-semibold mb-3">About Me</h3>
+      <ul class="space-y-1 text-sm text-white/90">
+        <li><a href="#" class="hover:underline">Short Profile</a></li>
+        <li><a href="#" class="hover:underline">Online Course</a></li>
+        <li><a href="#" class="hover:underline">Monthly Discount</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-semibold mb-3">Navigation</h3>
+      <ul class="space-y-1 text-sm text-white/90">
+        <li><a href="#" class="hover:underline">Home</a></li>
+        <li><a href="#" class="hover:underline">Teachers</a></li>
+        <li><a href="#" class="hover:underline">Pages</a></li>
+        <li><a href="#" class="hover:underline">Blog</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-semibold mb-3">More Information</h3>
+      <ul class="space-y-1 text-sm text-white/90">
+        <li><a href="#" class="hover:underline">Privacy and terms</a></li>
+        <li><a href="#" class="hover:underline">Copyright</a></li>
+        <li><a href="#" class="hover:underline">Accessibility</a></li>
+        <li><a href="#" class="hover:underline">Sitemap</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="bg-[#3f59b8] text-center py-4 text-xs">
+    @2026 Online Course. All right reserved. Designed By Kaila Najwa Olivia
+  </div>
+
+</footer>
+
+<script> 
+const links = document.querySelectorAll("nav a");
+
+links.forEach(link => {
+  link.addEventListener("click", function() {
+    links.forEach(l => l.classList.remove("text-blue-600"));
+    this.classList.add("text-blue-600");
+  });
+});
+const toggleBtn = document.getElementById("toggleTheme");
+
+if(localStorage.getItem("theme")==="dark"){
+  document.documentElement.classList.add("dark");
+  toggleBtn.innerHTML="Light Mode";
+}
+
+toggleBtn.addEventListener("click",()=>{
+  document.documentElement.classList.toggle("dark");
+
+  if(document.documentElement.classList.contains("dark")){
+    localStorage.setItem("theme","dark");
+    toggleBtn.innerHTML="Light Mode";
+  } else {
+    localStorage.setItem("theme","light");
+    toggleBtn.innerHTML="Dark Mode";
+  }
+});
+</script>
+
+</body>
+</html>
