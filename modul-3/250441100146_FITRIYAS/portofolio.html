@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio Fitriyas</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+.glass {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+}
+
+.soft-shadow {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+</style>
+
+</head>
+
+<body class="bg-gradient-to-br from-purple-100 via-pink-100 to-gray-100 text-gray-800 font-sans">
+
+
+<nav class="glass soft-shadow p-4 flex justify-between items-center sticky top-0">
+  <h1 class="font-bold text-lg text-purple-500">Fitriyas</h1>
+  <div class="space-x-6">
+    <a href="#" class="hover:text-purple-500 transition">Home</a>
+    <a href="#about" class="hover:text-purple-500 transition">About</a>
+    <a href="#project" class="hover:text-purple-500 transition">Project</a>
+    <a href="#contact" class="hover:text-purple-500 transition">Contact</a>
+  </div>
+</nav>
+
+
+<section class="h-screen flex items-center justify-center text-center">
+  <div class="glass soft-shadow p-10 rounded-2xl">
+
+    <img src="aku dewe.png"
+         class="w-40 h-30 mx-auto rounded-full border-4 border-white shadow-md">
+
+    <h2 class="text-4xl font-bold mt-4 text-purple-500">Fitriyas</h2>
+    <p class="text-gray-500">Mahasiswa Sistem Informasi</p>
+
+    <button class="mt-5 px-6 py-2 bg-purple-400 text-white rounded-full hover:bg-purple-500 transition shadow">
+      Lihat Project
+    </button>
+  </div>
+</section>
+
+
+<section id="about" class="p-12 text-center">
+  <h2 class="text-2xl mb-4 text-purple-500 font-semibold">Tentang Saya</h2>
+
+  <div class="max-w-xl mx-auto border-2 border-purple-300 rounded-2xl p-6">
+    <p class="text-gray-600 leading-relaxed">
+      Saya adalah mahasiswa yang sedang belajar pengembangan website menggunakan Tailwind CSS dan Bootstrap dengan desain modern dan menarik.
+    </p>
+  </div>
+</section>
+
+
+<section class="p-12">
+  <h2 class="text-2xl text-center mb-8 text-purple-500 font-semibold">Skill</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="glass soft-shadow p-6 text-center rounded-2xl hover:scale-105 transition">HTML</div>
+    <div class="glass soft-shadow p-6 text-center rounded-2xl hover:scale-105 transition">CSS</div>
+    <div class="glass soft-shadow p-6 text-center rounded-2xl hover:scale-105 transition">Python</div>
+  </div>
+</section>
+
+
+<section id="project" class="p-12 text-center">
+  <h2 class="text-2xl mb-8 text-purple-500 font-semibold">Project</h2>
+
+  <div class="grid md:grid-cols-3 gap-10">
+    <div class="glass soft-shadow p-5 rounded-2xl hover:shadow-lg transition">
+      <h3 class="font-semibold">Website Portfolio</h3>
+      <p class="text-gray-500">Portfolio pribadi</p>
+    </div>
+
+    <div class="glass soft-shadow p-5 rounded-2xl hover:shadow-lg transition">
+      <h3 class="font-semibold">Website Toko</h3>
+      <p class="text-gray-500">E-commerce sederhana</p>
+    </div>
+
+    <div class="glass soft-shadow p-5 rounded-2xl hover:shadow-lg transition">
+      <h3 class="font-semibold">Landing Page</h3>
+      <p class="text-gray-500">UI modern</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="p-12 text-center">
+  <h2 class="text-2xl mb-6 text-purple-500 font-semibold">Kontak Saya</h2>
+
+  <p class="text-gray-600 mb-2">Email: fitriyas@email.com</p>
+  <p class="text-gray-600 mb-2">WhatsApp: 085784265426</p>
+  <p class="text-gray-600">Instagram: @fitriyass_</p>
+</section>
+
+
+<footer class="text-center p-6 text-gray-500">
+  © 2026 Fitriyas
+</footer>
+
+</body>
+</html>
